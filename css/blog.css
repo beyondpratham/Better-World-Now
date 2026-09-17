@@ -17,7 +17,6 @@
 }
 .background2 {
   top: 0;
-  background-color: var(--wei);
   height: 223px;
 }
 .background {
@@ -170,7 +169,7 @@
   font-size: var(--font-size-sm);
   line-height: 26px;
   display: inline-block;
-  font-family: var(--font-advent-pro);
+  font-family: var(--font-manrope);
   color: var(--greys-light-grey);
   width: 400px;
 }
@@ -450,4 +449,11 @@
   font-size: var(--font-size-lg);
   color: var(--wei);
   font-family: var(--font-advent-pro);
+}
+
+/* Redundant duplicate label sitting exactly behind the real,
+   clickable LeaderBoard link -- harmless while both were the same
+   size, but visible once the clickable one grew. */
+.equipment25 {
+  visibility: hidden;
 }

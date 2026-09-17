@@ -583,3 +583,9 @@ a{
   color: var(--color-black);
   font-family: var(--font-advent-pro);
 }
+/* Redundant duplicate label sitting exactly behind the real,
+   clickable LeaderBoard link -- harmless while both were the same
+   size, but visible once the clickable one grew. */
+.equipment36 {
+  visibility: hidden;
+}

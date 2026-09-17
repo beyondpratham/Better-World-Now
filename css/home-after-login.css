@@ -168,6 +168,7 @@
   left: -3px;
   line-height: 32px;
   display: inline-block;
+  font-family: var(--font-manrope);
   width: 782px;
   height: 227px;
 }
@@ -245,6 +246,7 @@
   line-height: 32px;
   display: inline-block;
   text-align: right;
+  font-family: var(--font-manrope);
   width: 451px;
   height: 348px;
 }
@@ -422,6 +424,7 @@
   top: 382px;
   font-size: var(--font-size-11xl);
   line-height: 32px;
+  font-family: var(--font-manrope);
   width: 742px;
   height: 227px;
 }
@@ -571,4 +574,10 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+/* Redundant duplicate label sitting exactly behind the real,
+   clickable LeaderBoard link -- harmless while both were the same
+   size, but visible once the clickable one grew. */
+.equipment42 {
+  visibility: hidden;
 }

@@ -301,3 +301,9 @@
   color: rgb(237, 237, 237);
   margin-left: 20px;
 }
+/* Redundant duplicate label sitting exactly behind the real,
+   clickable LeaderBoard link -- harmless while both were the same
+   size, but visible once the clickable one grew. */
+.equipment3 {
+  visibility: hidden;
+}

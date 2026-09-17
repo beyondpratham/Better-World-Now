@@ -33,7 +33,7 @@ body > div:first-of-type {
   --font-manrope: Manrope;
 
   /* font sizes */
-  --font-size-sm: 14px;
+  --font-size-sm: 16px;
   --font-size-6xl: 25px;
   --font-size-lg: 18px;
   --font-size-13xl: 32px;
@@ -90,20 +90,46 @@ body > div:first-of-type {
    with a click listener, so clickable things consistently look and
    feel clickable across the whole site. */
 
-/* Text/logo nav items: a rounded "state layer" highlight on hover,
-   like Google's own apps use, instead of a plain opacity fade. */
+/* Top nav bar links: bigger text, and a hover "state layer" that
+   extends past the label on every side instead of hugging it tight
+   (the padding is balanced by an equal negative margin so the label
+   itself doesn't shift position; only the hoverable/highlighted area
+   grows). This is the standard Google-apps nav treatment. */
 #aboutUsText,
 #accountText,
-#betterWorldNowText,
 #blogText,
-#continueYourJourney,
-#createAccountText,
 #equipmentText,
 #equipmentText1,
 #equipmentText2,
 #equipmentText3,
 #equipmentText4,
-#equipmentText5,
+#equipmentText5 {
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: var(--font-size-xl) !important;
+  padding: 6px 10px;
+  margin: -6px -10px;
+  border-radius: var(--br-xs);
+  transition: background-color 0.2s ease;
+}
+#aboutUsText:hover,
+#accountText:hover,
+#blogText:hover,
+#equipmentText:hover,
+#equipmentText1:hover,
+#equipmentText2:hover,
+#equipmentText3:hover,
+#equipmentText4:hover,
+#equipmentText5:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Other text links with the same rounded hover highlight, at their
+   existing size (profile actions, form links - not the top nav). */
+#betterWorldNowText,
+#continueYourJourney,
+#createAccountText,
 #lOGINWITHGOOGLE,
 #logoContainer,
 #logoContainer1,
@@ -119,18 +145,9 @@ body > div:first-of-type {
   border-radius: var(--br-xs);
   transition: background-color 0.2s ease;
 }
-#aboutUsText:hover,
-#accountText:hover,
 #betterWorldNowText:hover,
-#blogText:hover,
 #continueYourJourney:hover,
 #createAccountText:hover,
-#equipmentText:hover,
-#equipmentText1:hover,
-#equipmentText2:hover,
-#equipmentText3:hover,
-#equipmentText4:hover,
-#equipmentText5:hover,
 #lOGINWITHGOOGLE:hover,
 #logoContainer:hover,
 #logoContainer1:hover,
