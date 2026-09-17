@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Learn Facts - BetterWorldNow</title>
+    <title>Jobs - BetterWorldNow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -22,6 +22,16 @@
       };
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
+    <style>
+      @keyframes search-roam {
+        0%   { transform: translate(-26px, -10px) rotate(-8deg); }
+        25%  { transform: translate(24px, 6px) rotate(6deg); }
+        50%  { transform: translate(-14px, 18px) rotate(-4deg); }
+        75%  { transform: translate(20px, -14px) rotate(8deg); }
+        100% { transform: translate(-26px, -10px) rotate(-8deg); }
+      }
+      .search-glass { animation: search-roam 5s ease-in-out infinite; }
+    </style>
   </head>
   <body class="bg-background text-white min-h-screen font-sans">
     <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
@@ -42,37 +52,26 @@
       </div>
     </nav>
 
-    <main class="pt-40 pb-32 max-w-2xl mx-auto px-6 w-full flex flex-col items-center">
-      <div class="w-14 h-14 rounded-full bg-brandGreen/10 flex items-center justify-center mb-8">
-        <svg class="w-7 h-7 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <main class="pt-40 pb-32 max-w-xl mx-auto px-6 flex flex-col items-center text-center">
+      <div class="relative w-40 h-40 mb-8 flex items-center justify-center">
+        <div class="w-24 h-24 rounded-full bg-brandGreen/10"></div>
+        <svg class="search-glass absolute w-14 h-14 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="10" cy="10" r="6" stroke-width="2"></circle>
+          <line x1="20" y1="20" x2="14.5" y2="14.5" stroke-width="2" stroke-linecap="round"></line>
+        </svg>
       </div>
-      <h1 class="text-2xl md:text-3xl font-bold text-center mb-6">
-        78% of marine mammals are at risk of choking on plastic
-      </h1>
-      <p class="text-gray-400 text-center leading-relaxed mb-14">
-        Or dying from accidental deaths, such as getting caught in fishing nets. Plastic bags and other plastic
-        garbage that ends up in the ocean kill over 1,000,000 sea animals every year.
+      <h1 class="text-2xl md:text-3xl font-bold mb-3">No openings yet &mdash; keep looking!</h1>
+      <p class="text-gray-400 leading-relaxed mb-4">
+        We're a tiny team right now, so there's nothing open on the roster today. That changes fast though &mdash;
+        as BetterWorldNow grows past quizzes and rewards into a bigger community platform, we'll need people who
+        care about sustainability, design, and building things that actually get used.
       </p>
-
-      <div class="flex justify-between w-full">
-        <button type="button" id="buttonStartSolving1" class="glass-card px-8 py-3 font-medium hover:bg-surfaceHover transition-colors">&larr; Go Back</button>
-        <button type="button" id="buttonStartSolving" class="bg-brandGreen text-background font-semibold px-8 py-3 rounded-full hover:bg-emerald-400 transition-colors">Next &rarr;</button>
-      </div>
+      <p class="text-gray-400 leading-relaxed">
+        Check back soon, or reach out to
+        <a href="./team.html" class="text-brandGreen font-semibold hover:text-emerald-400">the team</a>
+        directly if you'd like to help build BetterWorldNow &mdash; we're always happy to hear from people who
+        want to contribute before a role even exists.
+      </p>
     </main>
-
-    <script>
-      var buttonStartSolving = document.getElementById("buttonStartSolving");
-      if (buttonStartSolving) {
-        buttonStartSolving.addEventListener("click", function () {
-          window.location.href = "./fact5.html";
-        });
-      }
-      var buttonStartSolving1 = document.getElementById("buttonStartSolving1");
-      if (buttonStartSolving1) {
-        buttonStartSolving1.addEventListener("click", function () {
-          window.location.href = "./fact3.html";
-        });
-      }
-    </script>
   </body>
 </html>

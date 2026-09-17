@@ -28,6 +28,47 @@ a {
   color: #10B981;
 }
 
+/* Original BetterWorldNow brand mark: two stepped, right-rounded
+   blocks forming a "B". Restored from the pre-redesign logo shape. */
+.bwn-logo {
+  position: relative;
+  width: 24px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.bwn-logo::before,
+.bwn-logo::after {
+  content: '';
+  position: absolute;
+  background-color: #10B981;
+  border-radius: 0 6px 6px 0;
+}
+.bwn-logo::before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 17px;
+}
+.bwn-logo::after {
+  left: 0;
+  top: 0;
+  width: 17px;
+  height: 13px;
+}
+.bwn-logo-lg {
+  width: 40px;
+  height: 52px;
+}
+.bwn-logo-lg::before {
+  height: 28px;
+  border-radius: 0 10px 10px 0;
+}
+.bwn-logo-lg::after {
+  width: 28px;
+  height: 21px;
+  border-radius: 0 10px 10px 0;
+}
+
 .bwn-input {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);

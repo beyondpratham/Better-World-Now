@@ -29,13 +29,13 @@
     <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
       <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="./home-after-login.html" class="flex items-center gap-2">
-          <div class="w-6 h-8 bg-brandGreen rounded-sm"></div>
+          <div class="bwn-logo"></div>
           <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
         </a>
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="./home-after-login.html" class="text-brandGreen">About us</a>
           <a href="./desktop-12.html" class="hover:text-white transition-colors">Resources</a>
           <a href="./leaderboard.html" class="hover:text-white transition-colors">LeaderBoard</a>
-          <a href="./home-after-login.html" class="text-brandGreen">About us</a>
           <a href="./blog.html" class="hover:text-white transition-colors">Blog</a>
         </div>
         <a href="./profile.html" class="flex items-center gap-2 text-sm border border-white/10 px-4 py-2 rounded-full hover:bg-surface transition-all">
@@ -55,29 +55,34 @@
           It's always better together. Earn rewards for changing habits and acting for the planet earth.
         </p>
         <div class="flex gap-4">
-          <a href="./desktop-12.html" class="bg-brandGreen text-background font-semibold px-8 py-3 rounded-full hover:bg-emerald-400 transition-colors">
+          <a href="./contribute_more.html" class="bg-brandGreen text-background font-semibold px-8 py-3 rounded-full hover:bg-emerald-400 transition-colors">
             Start Contributing
           </a>
-          <a href="#about" class="glass-card px-8 py-3 font-medium hover:bg-surfaceHover transition-colors">
+          <a href="./desktop-12.html" class="glass-card px-8 py-3 font-medium hover:bg-surfaceHover transition-colors">
             Learn More
           </a>
         </div>
       </section>
 
-      <section id="about" class="glass-card p-10 md:p-16">
-        <span class="text-brandGold text-sm tracking-widest uppercase">About Us</span>
-        <p class="text-gray-300 text-lg leading-relaxed mt-4 max-w-3xl">
-          BetterWorldNow is a purpose-driven platform committed to creating a sustainable future for our planet. We
-          are deeply concerned about the degrading state of the environment and are committed to reversing the
-          adversities. Through our platform, we incentivize our users for every good deed they do towards
-          environmental sustainability, such as reducing plastic usage, promoting sustainable transportation, and
-          advocating for renewable energy. Our mission is to inspire a community of environmental stewards who are
-          committed to making a positive impact on the world. Join us in creating a better future for our planet.
-        </p>
-        <a href="./desktop-12.html" class="inline-flex items-center gap-2 text-brandGold font-semibold mt-6 hover:text-brandGreen transition-colors">
-          Know more
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-        </a>
+      <section id="about" class="glass-card p-10 md:p-16 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="text-brandGold text-sm tracking-widest uppercase">About Us</span>
+          <p class="text-gray-300 text-lg leading-relaxed mt-4">
+            BetterWorldNow is a purpose-driven platform committed to creating a sustainable future for our planet. We
+            are deeply concerned about the degrading state of the environment and are committed to reversing the
+            adversities. Through our platform, we incentivize our users for every good deed they do towards
+            environmental sustainability, such as reducing plastic usage, promoting sustainable transportation, and
+            advocating for renewable energy. Our mission is to inspire a community of environmental stewards who are
+            committed to making a positive impact on the world. Join us in creating a better future for our planet.
+          </p>
+          <a href="./desktop-12.html" class="inline-flex items-center gap-2 text-brandGold font-semibold mt-6 hover:text-brandGreen transition-colors">
+            Know more
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+        </div>
+        <div class="rounded-xl overflow-hidden">
+          <img src="../images/image-1@2x.png" alt="" class="w-full h-72 object-cover" />
+        </div>
       </section>
 
       <section class="grid md:grid-cols-2 gap-10 items-center">
@@ -91,8 +96,11 @@
             meaningful discussions with others who share their values.
           </p>
         </div>
-        <div class="glass-card p-10 flex items-center justify-center text-center">
-          <p class="text-2xl font-semibold text-white">Join us in creating a Better World Now</p>
+        <div class="glass-card overflow-hidden relative h-80">
+          <img src="../images/image-3@2x.png" alt="" class="w-full h-full object-cover opacity-80" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-6">
+            <p class="text-xl font-semibold text-white">Join us in creating a Better World Now</p>
+          </div>
         </div>
       </section>
 
@@ -112,10 +120,8 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </a>
         </div>
-        <div class="flex items-center justify-center">
-          <div class="w-12 h-12 rounded-full bg-brandGreen/10 flex items-center justify-center">
-            <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          </div>
+        <div class="rounded-xl overflow-hidden">
+          <img src="../images/image-16@2x.png" alt="" class="w-full h-72 object-cover" />
         </div>
       </section>
     </main>
@@ -124,7 +130,7 @@
       <div class="max-w-7xl mx-auto px-6 py-16 flex flex-wrap justify-between gap-12">
         <div>
           <div class="flex items-center gap-2 mb-3">
-            <div class="w-6 h-8 bg-brandGreen rounded-sm"></div>
+            <div class="bwn-logo"></div>
             <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
           </div>
           <p class="text-gray-400 text-sm mb-4">Making a better world, one action at a time!</p>
@@ -141,25 +147,25 @@
           <div>
             <div class="text-brandGold font-semibold mb-4">More on The Blog</div>
             <div class="flex flex-col gap-3 text-sm text-gray-300">
-              <a href="./blog.html" class="hover:text-white transition-colors">About BetterWorldNow</a>
-              <a href="./blog.html" class="hover:text-white transition-colors">Contributors &amp; Writers</a>
-              <a href="./blog.html" class="hover:text-white transition-colors">Write For Us</a>
+              <a href="./home-after-login.html" class="hover:text-white transition-colors">About BetterWorldNow</a>
+              <a href="./team.html" class="hover:text-white transition-colors">Contributors &amp; Writers</a>
+              <a href="mailto:write@betterworldnow.com" class="hover:text-white transition-colors">Write For Us</a>
             </div>
           </div>
           <div>
             <div class="text-brandGold font-semibold mb-4">Our Partnerships</div>
             <div class="flex flex-col gap-3 text-sm text-gray-300">
-              <span>Organizations</span>
-              <span>NGOs</span>
-              <span>Press</span>
+              <a href="./contribute_more.html" class="hover:text-white transition-colors">Organizations</a>
+              <a href="https://www.worldwildlife.org/" target="_blank" class="hover:text-white transition-colors">NGOs</a>
+              <a href="mailto:press@betterworldnow.com" class="hover:text-white transition-colors">Press</a>
             </div>
           </div>
           <div>
             <div class="text-brandGold font-semibold mb-4">Contact Us</div>
             <div class="flex flex-col gap-3 text-sm text-gray-300">
-              <span>The Team</span>
-              <span>Jobs</span>
-              <span>Privacy Policy</span>
+              <a href="./team.html" class="hover:text-white transition-colors">The Team</a>
+              <a href="./jobs.html" class="hover:text-white transition-colors">Jobs</a>
+              <a href="./privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
             </div>
           </div>
         </div>

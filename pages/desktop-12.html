@@ -24,18 +24,64 @@
       };
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
+    <style>
+      .flower-bed {
+        position: relative;
+        height: 110px;
+        margin-top: 3rem;
+        overflow: hidden;
+      }
+      .flower-bed::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .flower {
+        position: absolute;
+        bottom: 0;
+        width: 34px;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .flower .stem {
+        width: 2px;
+        margin: 0 auto;
+        background: rgba(16, 185, 129, 0.35);
+        order: 2;
+      }
+      .flower .bloom {
+        width: 34px;
+        height: 34px;
+        order: 1;
+        transform: scale(0);
+        opacity: 0;
+        animation: bloom-cycle 6s ease-in-out infinite;
+      }
+      @keyframes bloom-cycle {
+        0%, 10% { transform: scale(0) rotate(0deg); opacity: 0; }
+        30% { transform: scale(1.15) rotate(8deg); opacity: 1; }
+        45%, 70% { transform: scale(1) rotate(0deg); opacity: 1; }
+        90%, 100% { transform: scale(0) rotate(-8deg); opacity: 0; }
+      }
+    </style>
   </head>
   <body class="bg-background text-white min-h-screen font-sans">
     <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
       <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="./home-after-login.html" class="flex items-center gap-2">
-          <div class="w-6 h-8 bg-brandGreen rounded-sm"></div>
+          <div class="bwn-logo"></div>
           <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
         </a>
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="./home-after-login.html" class="hover:text-white transition-colors">About us</a>
           <a href="./desktop-12.html" class="text-brandGreen">Resources</a>
           <a href="./leaderboard.html" class="hover:text-white transition-colors">LeaderBoard</a>
-          <a href="./home-after-login.html" class="hover:text-white transition-colors">About us</a>
           <a href="./blog.html" class="hover:text-white transition-colors">Blog</a>
         </div>
         <a href="./profile.html" class="flex items-center gap-2 text-sm border border-white/10 px-4 py-2 rounded-full hover:bg-surface transition-all">
@@ -44,26 +90,33 @@
       </div>
     </nav>
 
-    <main class="pt-40 pb-32 max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-10">Resources</h2>
+    <main class="pt-40 pb-40 max-w-7xl mx-auto px-6 relative">
+      <h2 class="text-3xl font-bold mb-2">Resources</h2>
+      <p class="text-gray-400 mb-10 max-w-2xl">
+        Pick a way to learn today. Every quiz, fact, video, and article here feeds your points and pushes you up
+        the leaderboard &mdash; small habits, tracked over time.
+      </p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <a href="./quiz1.html" class="glass-card p-8 flex flex-col items-center justify-center text-center cursor-pointer hover:border-brandGreen/50 transition-all group">
           <div class="w-12 h-12 rounded-full bg-brandGreen/10 flex items-center justify-center mb-4 group-hover:bg-brandGreen/20 transition-colors">
             <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
-          <h3 class="font-semibold text-lg">Take A Quiz</h3>
+          <h3 class="font-semibold text-lg mb-1">Take A Quiz</h3>
+          <p class="text-gray-400 text-sm">5 quick questions on climate, waste, and transport &mdash; earn points for every correct answer.</p>
         </a>
         <a href="./fact1.html" class="glass-card p-8 flex flex-col items-center justify-center text-center cursor-pointer hover:border-brandGreen/50 transition-all group">
           <div class="w-12 h-12 rounded-full bg-brandGreen/10 flex items-center justify-center mb-4 group-hover:bg-brandGreen/20 transition-colors">
             <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M19 11a8 8 0 11-16 0 8 8 0 0116 0z"></path></svg>
           </div>
-          <h3 class="font-semibold text-lg">Learn Facts</h3>
+          <h3 class="font-semibold text-lg mb-1">Learn Facts</h3>
+          <p class="text-gray-400 text-sm">Bite-sized, surprising facts about oceans, forests, and plastic waste you can read in under a minute.</p>
         </a>
         <a href="https://www.youtube.com/watch?v=W5bh1JFo43U" target="_blank" class="glass-card p-8 flex flex-col items-center justify-center text-center cursor-pointer hover:border-brandGreen/50 transition-all group">
           <div class="w-12 h-12 rounded-full bg-brandGreen/10 flex items-center justify-center mb-4 group-hover:bg-brandGreen/20 transition-colors">
             <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
-          <h3 class="font-semibold text-lg">Watch Video</h3>
+          <h3 class="font-semibold text-lg mb-1">Watch Video</h3>
+          <p class="text-gray-400 text-sm">A short documentary clip on why acting now matters, hand-picked for new members.</p>
         </a>
         <a
           href="https://unfccc.int/news?gclid=CjwKCAjwue6hBhBVEiwA9YTx8M4s60gg8W5C_npZim2AOj59JZPD2Tjh0Bs1aLWuFibkaQn5FeSCuBoCvUQQAvD_BwE"
@@ -73,8 +126,147 @@
           <div class="w-12 h-12 rounded-full bg-brandGreen/10 flex items-center justify-center mb-4 group-hover:bg-brandGreen/20 transition-colors">
             <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
           </div>
-          <h3 class="font-semibold text-lg">Read Article</h3>
+          <h3 class="font-semibold text-lg mb-1">Read Article</h3>
+          <p class="text-gray-400 text-sm">The latest UN climate news, straight from the source, for when you want the full picture.</p>
         </a>
+      </div>
+
+      <div class="flower-bed" aria-hidden="true">
+        <div class="flower" style="left:5%;">
+          <div class="bloom" style="animation-delay:0s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#10B981">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:46px;"></div>
+        </div>
+        <div class="flower" style="left:16.5%;">
+          <div class="bloom" style="animation-delay:0.7s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#FBBF24">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:38px;"></div>
+        </div>
+        <div class="flower" style="left:28%;">
+          <div class="bloom" style="animation-delay:1.4s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#F472B6">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:52px;"></div>
+        </div>
+        <div class="flower" style="left:39.5%;">
+          <div class="bloom" style="animation-delay:2.1s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#60A5FA">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:42px;"></div>
+        </div>
+        <div class="flower" style="left:51%;">
+          <div class="bloom" style="animation-delay:2.8s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#10B981">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:48px;"></div>
+        </div>
+        <div class="flower" style="left:62.5%;">
+          <div class="bloom" style="animation-delay:3.5s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#F472B6">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:36px;"></div>
+        </div>
+        <div class="flower" style="left:74%;">
+          <div class="bloom" style="animation-delay:4.2s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#FBBF24">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:50px;"></div>
+        </div>
+        <div class="flower" style="left:85.5%;">
+          <div class="bloom" style="animation-delay:4.9s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#60A5FA">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:40px;"></div>
+        </div>
+        <div class="flower" style="left:97%;">
+          <div class="bloom" style="animation-delay:5.5s;">
+            <svg viewBox="0 0 40 40" class="w-full h-full">
+              <g fill="#10B981">
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(0 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(72 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(144 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(216 20 20)"/>
+                <ellipse cx="20" cy="11" rx="6" ry="10" transform="rotate(288 20 20)"/>
+              </g>
+              <circle cx="20" cy="20" r="5" fill="#FBBF24"/>
+            </svg>
+          </div>
+          <div class="stem" style="height:46px;"></div>
+        </div>
       </div>
     </main>
   </body>
