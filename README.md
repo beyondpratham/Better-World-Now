@@ -18,6 +18,13 @@ The logo's "B" is shaped like a step, representing taking the first step toward 
 
 Team: Pratham Singhal, Siddharth Gupta, Poorvi Kumar, Yajat Gupta, Aadya (Group 7, DIS).
 
+## Tech stack
+
+- **Parcel** bundles the site (`pages/*.html` as entry points) and serves it locally in development.
+- **Tailwind CSS** (via CDN, see each page's `<head>`) provides the utility classes for layout and the dark glassmorphism theme; shared tokens (colors, fonts) live in `css/theme.css`.
+- **GSAP** (installed as a local npm dependency, bundled by Parcel via `js/animations.js`) drives page-load fade-ins, staggered card reveals, and the leaderboard's filter transitions. It's a normal `dependencies` entry in `package.json` — no global install needed, `npm install` picks it up automatically.
+- Plain vanilla JS handles navigation, the leaderboard's filtering/sorting, and small interactive widgets (custom dropdown, quiz routing) — no framework.
+
 ## Running locally
 
 Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
