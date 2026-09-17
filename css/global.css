@@ -1,0 +1,199 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Design canvases are authored at a fixed 1728px width. This scales
+   and centers them to fit the real viewport instead of the old fixed
+   73% zoom, which only happened to fit one specific screen size.
+   (margin: 0 auto can't be used here: auto margins resolve to 0
+   instead of going negative once the 1728px canvas is wider than the
+   viewport, which left everything flush against the left edge.) */
+body > div:first-of-type {
+  left: 50%;
+  transform: translateX(-50%) scale(var(--page-scale));
+  transform-origin: top center;
+  transition: transform 0.2s ease-out;
+}
+
+:root {
+  --page-scale: 1;
+
+  /* fonts */
+  --font-roboto: Roboto;
+  --font-advent-pro: "Advent Pro";
+  --font-port-lligat-sans: "Port Lligat Sans";
+  --font-manrope: Manrope;
+
+  /* font sizes */
+  --font-size-sm: 14px;
+  --font-size-6xl: 25px;
+  --font-size-lg: 18px;
+  --font-size-13xl: 32px;
+  --font-size-mid: 17px;
+  --font-size-31xl: 50px;
+  --font-size-24xl-3: 43.3px;
+  --font-size-21xl: 40px;
+  --font-size-149xl-5: 168.5px;
+  --font-size-5xl: 24px;
+  --font-size-11xl: 30px;
+  --font-size-xl: 20px;
+  --font-size-69xl: 88px;
+  --font-size-45xl: 64px;
+
+  /* Colors */
+  --wei: #fff;
+  --color-black: #000;
+  --color-darkslategray-100: #333;
+  --color-dark-green: #222f33;
+  --green: #79caa1;
+  --color-mediumseagreen: #1bc47d;
+  --color-darkolivegreen: #30562f;
+  --dark-blue: #0a2640;
+  --bg: #0b1d26;
+  --color-gray-100: #0d0202;
+  --color-gray-200: rgba(255, 255, 255, 0.72);
+  --color-gray-300: rgba(255, 255, 255, 0.67);
+  --color-aquamarine-100: #69e6a6;
+  --color-aquamarine-200: rgba(105, 230, 166, 0.37);
+  --accent: #fbd784;
+  --color-beige: #f5f4e0;
+  --color-mediumspringgreen: #65f68e;
+  --greys-light-grey: #646d70;
+
+  /* Gaps */
+  --gap-7xs-9: 5.9px;
+  --gap-13xl: 32px;
+
+  /* Paddings */
+  --padding-4xs-2: 8.2px;
+  --padding-base-2: 15.2px;
+
+  /* border radiuses */
+  --br-8xl: 27px;
+  --br-xs: 12px;
+  --br-xl: 20px;
+  --br-11xl: 30px;
+
+  /* Effects */
+  --shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+}
+
+/* Shared hover/focus affordance for every element the pages wire up
+   with a click listener, so clickable things consistently look and
+   feel clickable across the whole site. */
+
+/* Text/logo nav items: a rounded "state layer" highlight on hover,
+   like Google's own apps use, instead of a plain opacity fade. */
+#aboutUsText,
+#accountText,
+#betterWorldNowText,
+#blogText,
+#continueYourJourney,
+#createAccountText,
+#equipmentText,
+#equipmentText1,
+#equipmentText2,
+#equipmentText3,
+#equipmentText4,
+#equipmentText5,
+#lOGINWITHGOOGLE,
+#logoContainer,
+#logoContainer1,
+#logoShapeContainer,
+#moreContainer,
+#moreOnThe,
+#rewardsText,
+#sIGNINWITHGOOGLE,
+#sUBMITText,
+#setYourGoals,
+#trackProgressText {
+  cursor: pointer;
+  border-radius: var(--br-xs);
+  transition: background-color 0.2s ease;
+}
+#aboutUsText:hover,
+#accountText:hover,
+#betterWorldNowText:hover,
+#blogText:hover,
+#continueYourJourney:hover,
+#createAccountText:hover,
+#equipmentText:hover,
+#equipmentText1:hover,
+#equipmentText2:hover,
+#equipmentText3:hover,
+#equipmentText4:hover,
+#equipmentText5:hover,
+#lOGINWITHGOOGLE:hover,
+#logoContainer:hover,
+#logoContainer1:hover,
+#logoShapeContainer:hover,
+#moreContainer:hover,
+#moreOnThe:hover,
+#rewardsText:hover,
+#sIGNINWITHGOOGLE:hover,
+#sUBMITText:hover,
+#setYourGoals:hover,
+#trackProgressText:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Big gradient CTA buttons (Next / Go back / Start solving): they
+   already paint an opaque background, so a translucent overlay
+   wouldn't show. Rounded corners plus a lift-and-brighten instead. */
+#buttonStartSolving,
+#buttonStartSolving1 {
+  cursor: pointer;
+  border-radius: var(--br-xl);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+#buttonStartSolving:hover,
+#buttonStartSolving1:hover {
+  transform: scale(1.04);
+  filter: brightness(1.08);
+}
+
+/* Bigger click targets (whole footer columns, decorative buttons
+   already carrying their own background/radius): a plain opacity
+   fade reads better than a highlight the size of a paragraph. */
+#footerContainer,
+#linksContainer,
+#rectangle,
+#rectangle2,
+#rectangleButton {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+#footerContainer:hover,
+#linksContainer:hover,
+#rectangle:hover,
+#rectangle2:hover,
+#rectangleButton:hover {
+  opacity: 0.8;
+}
+
+/* Dashboard/profile images with no existing hover treatment.
+   (Quiz answer options already have their own per-page hover
+   effect and are deliberately left out here to avoid this ID-based
+   rule overriding their higher-specificity class-based transform.) */
+#image11,
+#image25,
+#image26,
+#image27,
+#plantgrow1Image {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+#image11:hover,
+#image25:hover,
+#image26:hover,
+#image27:hover,
+#plantgrow1Image:hover {
+  transform: scale(1.03);
+}

@@ -1,0 +1,27 @@
+.image-11-icon,
+.image-20-icon {
+  position: absolute;
+  object-fit: cover;
+}
+.image-20-icon {
+  top: 0;
+  left: 0;
+  width: 1728px;
+  height: 1117px;
+}
+.image-11-icon {
+  top: 103px;
+  left: 593px;
+  border-radius: 78px;
+  width: 542px;
+  height: 601px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.google-signin {
+  position: relative;
+  background-color: var(--wei);
+  width: 1728px;
+  height: 1117px;
+  overflow: hidden;
+}

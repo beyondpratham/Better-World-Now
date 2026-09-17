@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #30562f;
+    color:#fff;
+}
+.container{
+    padding: 10px 10%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fbd784;
+}
+/* contact-------------------- */
+#contact{
+    padding-top: 50px;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-left a{
+    text-decoration: none;
+    color: #79caa1;
+}
+.contact-left .sub-title{
+    color: #79caa1;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #79caa1;
+    transform: translateY(-5px);
+}
+a{
+    color: #79caa1;
+}
+.btn.btn2{
+    color: #30562f;
+    display: inline-block;
+    background: #79caa1;
+    border-radius: 12px;
+    /* margin: 20px 0; */
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 12px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+button[type="submit"] {
+    border-radius: 12px;
+}

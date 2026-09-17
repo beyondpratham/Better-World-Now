@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/quiz5.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Port Lligat Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"
+    />
+  </head>
+  <body>
+    <div class="quiz5">
+      <img class="image-23-icon4" alt="" src="../images/image-23@2x.png" /><img
+        class="vector-4-stroke"
+        alt=""
+        src="../icons/vector-4-stroke.svg"
+      /><img class="quiz5-child" alt="" src="../icons/rectangle-3.svg" />
+      <div class="which-of-the">
+        Which of the following is NOT influenced by human activities?
+      </div>
+      <div class="stepper2">
+        <div class="step8">
+          <img class="state-icon" alt="" src="../icons/state.svg" />
+        </div>
+        <div class="step8">
+          <img class="state-icon" alt="" src="../icons/state1.svg" />
+        </div>
+        <div class="step8">
+          <img class="state-icon" alt="" src="../icons/state2.svg" />
+        </div>
+        <div class="step8">
+          <img class="state-icon" alt="" src="../icons/state3.svg" />
+        </div>
+        <div class="step8">
+          <img class="state-icon" alt="" src="../icons/state4.svg" />
+        </div>
+      </div>
+      <div class="vector-parent" id="frameContainer">
+        <img class="frame-child" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a">A .</div>
+        <div class="depletion-of-ground">Depletion of ground water</div>
+      </div>
+      <div class="vector-group" id="frameContainer1">
+        <img class="frame-child" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a">B .</div>
+        <div class="depletion-of-ground">
+          Destruction of mangroves and wetlands
+        </div>
+      </div>
+      <div class="vector-container" id="frameContainer2">
+        <img class="frame-child" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a">C .</div>
+        <div class="depletion-of-ground">
+          Increased extinction rate of species
+        </div>
+      </div>
+      <div class="frame-div" id="frameContainer3">
+        <img class="frame-child" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a">D .</div>
+        <div class="depletion-of-ground">None of the Above</div>
+      </div>
+      <div class="button-start-solving4" id="buttonStartSolving">
+        <img class="next-icon" alt="" src="../icons/next.svg" /><img
+          class="button-start-solving-child1"
+          alt=""
+          src="../icons/polygon-22.svg"
+        />
+      </div>
+      <div class="button-start-solving5" id="buttonStartSolving1">
+        <img
+          class="button-start-solving-child2"
+          alt=""
+          src="../icons/polygon-23.svg"
+        /><img class="previous-icon" alt="" src="../icons/previous.svg" />
+      </div>
+      <img class="logo-shape-icon" alt="" src="../icons/logo-shape.svg" /><img
+        class="quiz5-item"
+        alt=""
+        src="../icons/rectangle-1294.svg"
+      /><img class="header-icon" alt="" src="../icons/header.svg" />
+    </div>
+
+    <script src="../js/page-scale.js"></script>
+    <script>
+      var frameContainer = document.getElementById("frameContainer");
+      if (frameContainer) {
+        frameContainer.addEventListener("click", function (e) {
+          window.location.href = "./wrong.html";
+        });
+      }
+      
+      var frameContainer1 = document.getElementById("frameContainer1");
+      if (frameContainer1) {
+        frameContainer1.addEventListener("click", function (e) {
+          window.location.href = "./wrong.html";
+        });
+      }
+      
+      var frameContainer2 = document.getElementById("frameContainer2");
+      if (frameContainer2) {
+        frameContainer2.addEventListener("click", function (e) {
+          window.location.href = "./wrong.html";
+        });
+      }
+      
+      var frameContainer3 = document.getElementById("frameContainer3");
+      if (frameContainer3) {
+        frameContainer3.addEventListener("click", function (e) {
+          window.location.href = "./right.html";
+        });
+      }
+      
+      var buttonStartSolving = document.getElementById("buttonStartSolving");
+      if (buttonStartSolving) {
+        buttonStartSolving.addEventListener("click", function (e) {
+          window.location.href = "./desktop-12.html";
+        });
+      }
+      
+      var buttonStartSolving1 = document.getElementById("buttonStartSolving1");
+      if (buttonStartSolving1) {
+        buttonStartSolving1.addEventListener("click", function (e) {
+          window.location.href = "./quiz4.html";
+        });
+      }
+      </script>
+  </body>
+</html>

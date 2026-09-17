@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/quiz2.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Port Lligat Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"
+    />
+  </head>
+  <body>
+    <div class="quiz2">
+      <img class="image-23-icon7" alt="" src="../images/image-23@2x.png" />
+      <img
+        class="vector-4-stroke3"
+        alt=""
+        src="../icons/vector-4-stroke.svg"
+      />
+      <img class="quiz2-child" alt="" src="../icons/rectangle-3.svg" />
+      <div class="which-colours-in">
+        Which colours in dustbins represent these functions?
+      </div>
+      <div class="wet-and-biodegradable">
+        1 - wet and biodegradable wastes 2 - dry and non-biodegradable wastes 3
+        - non recyclable
+      </div>
+      <div class="stepper5">
+        <div class="step23">
+          <img class="state-icon15" alt="" src="../icons/state.svg" />
+        </div>
+        <div class="step23">
+          <img class="state-icon15" alt="" src="../icons/state8.svg" />
+        </div>
+        <div class="step23">
+          <img class="state-icon15" alt="" src="../icons/state2.svg" />
+        </div>
+        <div class="step23">
+          <img class="state-icon15" alt="" src="../icons/state3.svg" />
+        </div>
+        <div class="step23">
+          <img class="state-icon15" alt="" src="../icons/state6.svg" />
+        </div>
+      </div>
+      <div class="vector-parent9" id="frameContainer0">
+        <img class="frame-child9" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a3">A .</div>
+        <div class="red-2-">1 - red 2 - blue 3 - green</div>
+      </div>
+      <div class="vector-parent10" id="frameContainer1">
+        <img class="frame-child9" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a3">B .</div>
+        <div class="red-2-">1 - green 2 - blue 3 - red</div>
+      </div>
+      <div class="vector-parent11" id="frameContainer2">
+        <img class="frame-child9" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a3">C .</div>
+        <div class="red-2-">1 - blue 2 - green 3 - red</div>
+      </div>
+      <div class="vector-parent12" id="frameContainer3">
+        <img class="frame-child9" alt="" src="../icons/rectangle-4.svg" />
+        <div class="a3">D .</div>
+        <div class="red-2-">1 - green 2 - red 3 - blue</div>
+      </div>
+      <div class="button-start-solving10" id="buttonStartSolving">
+        <img class="next-icon3" alt="" src="../icons/next.svg" /><img
+          class="button-start-solving-child7"
+          alt=""
+          src="../icons/polygon-22.svg"
+        />
+      </div>
+      <div class="button-start-solving11" id="buttonStartSolving1">
+        <img
+          class="button-start-solving-child8"
+          alt=""
+          src="../icons/polygon-24.svg"
+        /><img class="previous-icon3" alt="" src="../icons/previous.svg" />
+      </div>
+      <img class="logo-shape-icon3" alt="" src="../icons/logo-shape.svg" /><img
+        class="quiz2-item"
+        alt=""
+        src="../icons/rectangle-1294.svg"
+      /><img class="header-icon3" alt="" src="../icons/header.svg" />
+    </div>
+
+    <script src="../js/page-scale.js"></script>
+    <script>
+      var frameContainer3 = document.getElementById("frameContainer0");
+      if (frameContainer3) {
+        frameContainer3.addEventListener("click", function (e) {
+          window.location.href = "./wrong.html";
+        });
+      }
+      var frameContainer1 = document.getElementById("frameContainer1");
+      if (frameContainer1) {
+        frameContainer1.addEventListener("click", function (e) {
+          window.location.href = "./right.html";
+        });
+      }
+      
+      var frameContainer2 = document.getElementById("frameContainer2");
+      if (frameContainer2) {
+        frameContainer2.addEventListener("click", function (e) {
+          window.location.href = "./wrong.html";
+        });
+      }
+      
+      var frameContainer3 = document.getElementById("frameContainer3");
+      if (frameContainer3) {
+        frameContainer3.addEventListener("click", function (e) {
+          window.location.href = "./wrong.html";
+        });
+      }
+      
+      var buttonStartSolving = document.getElementById("buttonStartSolving");
+      if (buttonStartSolving) {
+        buttonStartSolving.addEventListener("click", function (e) {
+          window.location.href = "./quiz3.html";
+        });
+      }
+      
+      var buttonStartSolving1 = document.getElementById("buttonStartSolving1");
+      if (buttonStartSolving1) {
+        buttonStartSolving1.addEventListener("click", function (e) {
+          window.location.href = "./quiz1.html";
+        });
+      }
+      </script>
+  </body>
+</html>

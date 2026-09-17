@@ -1,0 +1,196 @@
+.image-19-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1728px;
+  height: 1268px;
+  object-fit: cover;
+}
+.signup-child,
+.signup-item {
+  position: absolute;
+  top: 612px;
+  left: 603px;
+  background-color: var(--color-aquamarine-100);
+  width: 520px;
+  height: 77px;
+  border-radius: var(--br-xl);
+}
+.signup-item {
+  top: 166px;
+  left: 604px;
+  background-color: var(--color-aquamarine-200);
+}
+.sign-up {
+  position: absolute;
+  top: 626px;
+  left: 794px;
+  font-size: var(--font-size-21xl);
+  font-family: var(--font-advent-pro);
+  color: var(--color-darkolivegreen);
+}
+.signup-inner {
+  position: absolute;
+  top: 707px;
+  left: 603px;
+  background-color: var(--color-gray-200);
+  width: 520px;
+  height: 77px;
+  border-radius: var(--br-xl);
+}
+.login-with-google,
+.signin-with-google {
+  position: absolute;
+  font-size: var(--font-size-21xl);
+  display: inline-block;
+  font-family: var(--font-advent-pro);
+  height: 48px;
+}
+.signin-with-google {
+  top: 721px;
+  left: 677px;
+  color: var(--color-darkolivegreen);
+  width: 372px;
+  cursor: pointer;
+}
+.login-with-google {
+  top: 547px;
+  left: 698px;
+  color: var(--wei);
+  width: 330px;
+}
+.betterworldnow10 {
+  position: absolute;
+  height: 3.76%;
+  width: 20.14%;
+  top: 4.57%;
+  left: 40.91%;
+  font-size: 43.25px;
+  line-height: 33.64px;
+  display: flex;
+  color: var(--wei);
+  align-items: center;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.logo-shape-child21,
+.logo-shape-child22 {
+  position: absolute;
+  height: 53.33%;
+  width: 100%;
+  top: 46.67%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 12.01px 12.01px 0;
+  background-color: var(--green);
+}
+.logo-shape-child22 {
+  height: 40%;
+  width: 69.57%;
+  top: 0;
+  right: 30.43%;
+  bottom: 60%;
+}
+.logo-shape12 {
+  position: absolute;
+  height: 2.97%;
+  width: 1.5%;
+  top: 5.06%;
+  right: 59.73%;
+  bottom: 91.97%;
+  left: 38.77%;
+}
+.full-name {
+  position: absolute;
+  top: 168px;
+  left: 603px;
+  line-height: 72px;
+  font-size: 25px;
+  font-family: var(--font-port-lligat-sans);
+  width:516px;
+  color: #fff;
+  background-color: var(--color-aquamarine-200);
+  border: none;
+  border-radius: var(--br-xl);
+}
+.signup-child1 {
+  position: absolute;
+  top: 262px;
+  left: 604px;
+  background-color: var(--color-aquamarine-200);
+  width: 520px;
+  height: 77px;
+  border-radius: var(--br-xl);
+}
+.e-mail-id {
+  position: absolute;
+  top: 263px;
+  left: 603px;
+  line-height: 72px;
+  font-size: 25px;
+  font-family: var(--font-port-lligat-sans);
+  width:516px;
+  color: #fff;
+  background-color: var(--color-aquamarine-200);
+  border: none;
+  border-radius: var(--br-xl);
+}
+.signup-child2 {
+  position: absolute;
+  top: 356px;
+  left: 604px;
+  background-color: var(--color-aquamarine-200);
+  width: 520px;
+  height: 77px;
+  border-radius: var(--br-xl);
+}
+.password {
+  position: absolute;
+  top: 357px;
+  left: 603px;
+  line-height: 72px;
+  font-size: 25px;
+  font-family: var(--font-port-lligat-sans);
+  width:516px;
+  color: #fff;
+  background-color: var(--color-aquamarine-200);
+  border: none;
+  border-radius: var(--br-xl);
+}
+.signup-child3 {
+  position: absolute;
+  top: 450px;
+  left: 604px;
+  background-color: var(--color-aquamarine-200);
+  width: 520px;
+  height: 77px;
+  border-radius: var(--br-xl);
+}
+.confirm-password {
+  position: absolute;
+  top: 450px;
+  left: 603px;
+  line-height: 72px;
+  font-size: 25px;
+  font-family: var(--font-port-lligat-sans);
+  width:516px;
+  color: #fff;
+  background-color: var(--color-aquamarine-200);
+  border: none;
+  border-radius: var(--br-xl);
+}
+.signup {
+  position: relative;
+  background-color: var(--color-darkolivegreen);
+  width: 1728px;
+  height: 1022px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-gray-300);
+  font-family: var(--font-manrope);
+}
+.full-name::placeholder, .e-mail-id::placeholder, .password::placeholder, .confirm-password::placeholder {
+  color: rgb(154, 145, 145);
+}

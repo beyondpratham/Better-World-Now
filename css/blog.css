@@ -1,0 +1,453 @@
+.background1 {
+  position: absolute;
+  top: 202.5px;
+  left: -0.5px;
+  background-color: var(--color-dark-green);
+  border: 1px solid var(--color-dark-green);
+  box-sizing: border-box;
+  width: 1729px;
+  height: 479px;
+}
+.background,
+.background2,
+.img-icon {
+  position: absolute;
+  left: 0;
+  width: 1728px;
+}
+.background2 {
+  top: 0;
+  background-color: var(--wei);
+  height: 223px;
+}
+.background {
+  top: 600px;
+  height: 681px;
+}
+.img-icon {
+  top: 0;
+  height: 1117px;
+  object-fit: cover;
+  opacity: 0.7;
+  mix-blend-mode: normal;
+}
+.duurzame-tiny-huisje {
+  position: relative;
+  opacity: 0.8;
+  mix-blend-mode: normal;
+}
+.een-ecologisch-tiny {
+  position: relative;
+  font-size: var(--font-size-31xl);
+  font-family: var(--font-port-lligat-sans);
+  display: inline-block;
+  width: 487px;
+}
+.text {
+  position: absolute;
+  top: 342.55px;
+  left: 172.8px;
+  width: 760.32px;
+  height: 340.68px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.header7,
+.innovatie {
+  position: absolute;
+  left: 0;
+}
+.header7 {
+  top: 0;
+  width: 1728px;
+  height: 1117px;
+  font-size: 16px;
+}
+.innovatie {
+  width: 18.43%;
+  top: calc(50% - 84.5px);
+  display: inline-block;
+}
+.alle-ecocabins-hebbe,
+.wij-hebben-als {
+  position: relative;
+  display: inline-block;
+  width: 380px;
+  flex-shrink: 0;
+  opacity: 0.7;
+  mix-blend-mode: normal;
+}
+.wij-hebben-als {
+  line-height: 26px;
+}
+.alle-ecocabins-hebbe {
+  line-height: 24px;
+}
+.container {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 43px;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-advent-pro);
+}
+.about-text {
+  position: absolute;
+  top: 1034px;
+  left: 173px;
+  width: 1387px;
+  height: 169px;
+  overflow: hidden;
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-port-lligat-sans);
+}
+.background3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--wei);
+  width: 1728px;
+  height: 532px;
+}
+.perhaps-the-most {
+  margin-block-start: 0;
+  margin-block-end: 20px;
+}
+.thanks-to-betterworldnow {
+  margin: 0;
+}
+.de-draagconstructies {
+  position: relative;
+  letter-spacing: 1px;
+  line-height: 22px;
+  display: inline-block;
+  width: 557px;
+  opacity: 0.7;
+  mix-blend-mode: normal;
+}
+.text-01 {
+  position: absolute;
+  top: 89px;
+  left: 915.84px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.background4,
+.usp {
+  position: absolute;
+  left: 0;
+}
+.usp {
+  top: 1281px;
+  width: 1728px;
+  height: 532px;
+  font-size: var(--font-size-sm);
+  color: var(--greys-light-grey);
+}
+.background4 {
+  top: 563px;
+  background-color: var(--wei);
+  width: 1064px;
+  height: 399px;
+  border-radius: var(--br-11xl);
+}
+.duurzame-materialen {
+  position: relative;
+}
+.alle-ecocabins-hebbe1 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+  display: inline-block;
+  font-family: var(--font-advent-pro);
+  color: var(--greys-light-grey);
+  width: 400px;
+}
+.container1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 13px;
+}
+.intro {
+  position: absolute;
+  top: 625px;
+  left: 173px;
+  width: 691px;
+  height: 275px;
+  font-size: var(--font-size-11xl);
+  color: var(--color-dark-green);
+  font-family: var(--font-port-lligat-sans);
+}
+.logo-shape-child25,
+.logo-shape-child26 {
+  position: absolute;
+  height: 53.33%;
+  width: 100%;
+  top: 46.67%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 12.01px 12.01px 0;
+  background-color: var(--green);
+}
+.logo-shape-child26 {
+  height: 40%;
+  width: 69.57%;
+  top: 0;
+  right: 30.43%;
+  bottom: 60%;
+}
+.logo-shape14 {
+  position: absolute;
+  height: 1.74%;
+  width: 1.5%;
+  top: 2.4%;
+  right: 95.95%;
+  bottom: 95.85%;
+  left: 2.55%;
+}
+.blog-child {
+  position: absolute;
+  top: 66px;
+  left: 1048px;
+  border-radius: var(--br-8xl);
+  width: 61px;
+  height: 22px;
+}
+.betterworldnow12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+.logo9 {
+  position: absolute;
+  top: 11px;
+  left: 38px;
+  width: 215px;
+  height: 34px;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-port-lligat-sans);
+}
+.making-a-better,
+.more-on-the {
+  position: absolute;
+  left: 0;
+  line-height: 32px;
+}
+.making-a-better {
+  top: 70px;
+  display: inline-block;
+  width: 303px;
+}
+.more-on-the {
+  top: 0;
+  font-size: var(--font-size-5xl);
+  color: var(--accent);
+}
+.about-betterworldnow {
+  top: 56px;
+}
+.about-betterworldnow,
+.contributors-writers,
+.write-for-us {
+  position: absolute;
+  left: 0;
+  line-height: 32px;
+  font-weight: 500;
+}
+.contributors-writers {
+  top: 104px;
+}
+.write-for-us {
+  top: 152px;
+}
+.links {
+  position: absolute;
+  top: 4px;
+  left: 826px;
+  width: 165px;
+}
+.links,
+.links1,
+.links2 {
+  height: 184px;
+}
+.links1,
+.links2,
+.logo-shape15 {
+  position: absolute;
+}
+.links1 {
+  top: 0;
+  left: 1302px;
+  width: 99px;
+}
+.links2 {
+  top: 4px;
+  left: 1067px;
+  width: 159px;
+}
+.logo-shape15 {
+  height: 17.64%;
+  width: 1.85%;
+  top: 6.38%;
+  right: 98.15%;
+  bottom: 75.98%;
+  left: 0;
+}
+.footer {
+  position: absolute;
+  top: 1997px;
+  left: 163px;
+  width: 1401px;
+  height: 188px;
+  cursor: pointer;
+}
+.follow-me {
+  position: absolute;
+  top: 0;
+  left: 24px;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+}
+.instagram-icon {
+  top: 101px;
+  left: 0;
+  height: 24px;
+  overflow: hidden;
+}
+.instagram-icon,
+.social,
+.twitter-icon {
+  position: absolute;
+  width: 24px;
+}
+.twitter-icon {
+  top: 149px;
+  left: 0;
+  height: 24px;
+  overflow: hidden;
+}
+.social {
+  top: 359px;
+  left: 80px;
+  height: 173px;
+}
+.image-13-icon,
+.image-14-icon {
+  position: absolute;
+  top: 524px;
+  left: 994px;
+  width: 561.6px;
+  height: 366px;
+  object-fit: cover;
+  border-radius: var(--br-11xl);
+}
+.image-14-icon {
+  top: 1366px;
+  left: 173px;
+  width: 613.44px;
+  height: 362px;
+}
+.about-us9,
+.equipment25 {
+  position: absolute;
+  top: 2px;
+}
+.about-us9 {
+  left: 868px;
+  cursor: pointer;
+}
+.equipment25 {
+  left: 738px;
+}
+.account9,
+.equipment26 {
+  position: absolute;
+  cursor: pointer;
+}
+.equipment26 {
+  top: 0;
+  left: 608px;
+}
+.account9 {
+  top: 2px;
+  left: 1514px;
+  font-size: var(--font-size-mid);
+  display: inline-block;
+  width: 78px;
+}
+.icons-general-cart9 {
+  position: absolute;
+  top: 0;
+  left: 1484px;
+  width: 24px;
+  height: 24px;
+}
+.betterworldnow13 {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 456px;
+}
+.logo10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 227px;
+  height: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-port-lligat-sans);
+}
+.blog10,
+.equipment27 {
+  position: absolute;
+  top: 2px;
+  left: 983px;
+}
+.equipment27 {
+  left: 738px;
+  cursor: pointer;
+}
+.header8 {
+  position: absolute;
+  top: 64px;
+  left: 80px;
+  width: 1648px;
+  height: 25px;
+  overflow: hidden;
+}
+.blog9 {
+  position: relative;
+  background-color: #26353b;
+  width: 1728px;
+  height: 2287px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--wei);
+  font-family: var(--font-advent-pro);
+}
