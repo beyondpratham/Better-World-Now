@@ -3,217 +3,135 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/quiz1.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Port Lligat Sans:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"
-    />
-  </head>
-  <body>
-    <div class="quiz1">
-      <img class="image-23-icon9" alt="" src="../images/image-23@2x.png" /><img
-        class="quiz1-child"
-        alt=""
-        src="../icons/vector-4.svg"
-      />
-      <div class="quiz1-item"></div>
-      <div class="stepper6">
-        <div class="step28">
-          <div class="state4">
-            <div class="line2"></div>
-            <img class="state-child1" alt="" src="../icons/ellipse-12.svg" />
-            <div class="div4">1</div>
-          </div>
-        </div>
-        <div class="step29">
-          <div class="state4">
-            <div class="line3"></div>
-            <img class="state-child1" alt="" src="../icons/ellipse-13.svg" />
-            <div class="div5">2</div>
-          </div>
-        </div>
-        <div class="step28">
-          <div class="state4">
-            <div class="line4"></div>
-            <img class="state-child1" alt="" src="../icons/ellipse-14.svg" />
-            <div class="div4">3</div>
-          </div>
-        </div>
-        <div class="step28">
-          <div class="state4">
-            <div class="line5"></div>
-            <img class="state-child1" alt="" src="../icons/ellipse-14.svg" />
-            <div class="div5">4</div>
-          </div>
-        </div>
-        <div class="step28">
-          <div class="state4">
-            <div class="line4"></div>
-            <img class="state-child1" alt="" src="../icons/ellipse-14.svg" />
-            <div class="div4">5</div>
-          </div>
-        </div>
-      </div>
-      <div class="how-long-does">
-        How long does it take for Carbon Dioxide in the atmosphere to disperse?
-      </div>
-      <div class="button-start-solving12" id="buttonStartSolving">
-        <div class="next2">Next</div>
-        <img
-          class="button-start-solving-child9"
-          alt=""
-          src="../icons/polygon-2.svg"
-        />
-      </div>
-      <div class="button-start-solving13" id="buttonStartSolving1">
-        <img
-          class="button-start-solving-child10"
-          alt=""
-          src="../icons/polygon-21.svg"
-        />
-        <div class="go-back1">Go Back</div>
-      </div>
-      <div class="logo-shape7" id="logoShapeContainer">
-        <div class="logo-shape-child11"></div>
-        <div class="logo-shape-child12"></div>
-      </div>
-      <img class="quiz1-inner" alt="" src="../icons/rectangle-1294.svg" />
-      <div class="header4">
-        <b class="about-us4" id="aboutUsText">About us</b
-        ><b class="equipment12">LeaderBoard</b
-        ><b class="equipment13">Resources</b
-        ><b class="account4" id="accountText">My Profile</b
-        ><img
-          class="icons-general-cart4"
-          alt=""
-          src="../icons/icons-general--cart.svg"
-        />
-        <div class="logo4" id="logoContainer">
-          <div class="betterworldnow5">BetterWorldNow</div>
-        </div>
-        <b class="blog4" id="blogText">Blog</b
-        ><b class="equipment14" id="equipmentText2">LeaderBoard</b>
-      </div>
-      <div class="vector-parent13" id="frameContainer">
-        <img class="frame-child13" alt="" src="../icons/rectangle-4.svg" />
-        <div class="year">1 Year</div>
-      </div>
-      <div class="vector-parent14" id="frameContainer1">
-        <img class="frame-child13" alt="" src="../icons/rectangle-4.svg" />
-        <div class="years">100 Years</div>
-      </div>
-      <div class="vector-parent15" id="frameContainer2">
-        <img class="frame-child13" alt="" src="../icons/rectangle-4.svg" />
-        <div class="years1">10 Years</div>
-      </div>
-      <div class="vector-parent16" id="frameContainer3">
-        <img class="frame-child13" alt="" src="../icons/rectangle-4.svg" />
-        <div class="years">50 Years</div>
-      </div>
-      <div class="a4">A .</div>
-      <div class="b4">B .</div>
-      <div class="c4">C .</div>
-      <div class="d4">D .</div>
-    </div>
-
-    <script src="../js/page-scale.js"></script>
+    <title>Take A Quiz - BetterWorldNow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      var buttonStartSolving = document.getElementById("buttonStartSolving");
-      if (buttonStartSolving) {
-        buttonStartSolving.addEventListener("click", function (e) {
-          window.location.href = "./quiz2.html";
-        });
-      }
-      
-      var buttonStartSolving1 = document.getElementById("buttonStartSolving1");
-      if (buttonStartSolving1) {
-        buttonStartSolving1.addEventListener("click", function (e) {
-          window.location.href = "./desktop-12.html";
-        });
-      }
-      
-      var aboutUsText = document.getElementById("aboutUsText");
-      if (aboutUsText) {
-        aboutUsText.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var accountText = document.getElementById("accountText");
-      if (accountText) {
-        accountText.addEventListener("click", function (e) {
-          window.location.href = "./profile.html";
-        });
-      }
-      
-      var logoContainer = document.getElementById("logoContainer");
-      if (logoContainer) {
-        logoContainer.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var logoShapeContainer = document.getElementById("logoShapeContainer");
-      if (logoShapeContainer) {
-        logoShapeContainer.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var blogText = document.getElementById("blogText");
-      if (blogText) {
-        blogText.addEventListener("click", function (e) {
-          window.location.href = "./blog.html";
-        });
-      }
-      
-      var equipmentText2 = document.getElementById("equipmentText2");
-      if (equipmentText2) {
-        equipmentText2.addEventListener("click", function (e) {
-          window.location.href = "./leaderboard.html";
-        });
-      }
-      
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#0d1310',
+              surface: 'rgba(255, 255, 255, 0.03)',
+              surfaceHover: 'rgba(255, 255, 255, 0.08)',
+              brandGreen: '#10B981',
+              brandGold: '#FBBF24',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body class="bg-background text-white min-h-screen font-sans">
+    <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="./home-after-login.html" class="flex items-center gap-2">
+          <div class="w-6 h-8 bg-brandGreen rounded-sm"></div>
+          <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
+        </a>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="./desktop-12.html" class="hover:text-white transition-colors">Resources</a>
+          <a href="./leaderboard.html" class="hover:text-white transition-colors">LeaderBoard</a>
+          <a href="./home-after-login.html" class="hover:text-white transition-colors">About us</a>
+          <a href="./blog.html" class="hover:text-white transition-colors">Blog</a>
+        </div>
+        <a href="./profile.html" class="flex items-center gap-2 text-sm border border-white/10 px-4 py-2 rounded-full hover:bg-surface transition-all">
+          <span>My Profile</span>
+        </a>
+      </div>
+    </nav>
+
+    <main class="pt-40 pb-32 max-w-3xl mx-auto px-6 w-full">
+      <div class="flex items-center justify-center gap-3 mb-14">
+        <div class="w-9 h-9 rounded-full bg-brandGreen text-background font-bold flex items-center justify-center text-sm">1</div>
+        <div class="w-16 h-px bg-white/10"></div>
+        <div class="w-9 h-9 rounded-full glass-card font-bold flex items-center justify-center text-sm text-gray-400">2</div>
+        <div class="w-16 h-px bg-white/10"></div>
+        <div class="w-9 h-9 rounded-full glass-card font-bold flex items-center justify-center text-sm text-gray-400">3</div>
+        <div class="w-16 h-px bg-white/10"></div>
+        <div class="w-9 h-9 rounded-full glass-card font-bold flex items-center justify-center text-sm text-gray-400">4</div>
+        <div class="w-16 h-px bg-white/10"></div>
+        <div class="w-9 h-9 rounded-full glass-card font-bold flex items-center justify-center text-sm text-gray-400">5</div>
+      </div>
+
+      <h1 class="text-2xl md:text-3xl font-bold text-center mb-12">
+        How long does it take for Carbon Dioxide in the atmosphere to disperse?
+      </h1>
+
+      <div class="grid md:grid-cols-2 gap-5 mb-14">
+        <button type="button" id="frameContainer" class="quiz-option glass-card p-6 text-left flex items-center gap-4 hover:bg-surfaceHover hover:border-brandGreen/40 transition-all">
+          <span class="font-bold text-brandGold">A.</span>
+          <span class="font-medium">1 Year</span>
+        </button>
+        <button type="button" id="frameContainer1" class="quiz-option glass-card p-6 text-left flex items-center gap-4 hover:bg-surfaceHover hover:border-brandGreen/40 transition-all">
+          <span class="font-bold text-brandGold">B.</span>
+          <span class="font-medium">100 Years</span>
+        </button>
+        <button type="button" id="frameContainer2" class="quiz-option glass-card p-6 text-left flex items-center gap-4 hover:bg-surfaceHover hover:border-brandGreen/40 transition-all">
+          <span class="font-bold text-brandGold">C.</span>
+          <span class="font-medium">10 Years</span>
+        </button>
+        <button type="button" id="frameContainer3" class="quiz-option glass-card p-6 text-left flex items-center gap-4 hover:bg-surfaceHover hover:border-brandGreen/40 transition-all">
+          <span class="font-bold text-brandGold">D.</span>
+          <span class="font-medium">50 Years</span>
+        </button>
+      </div>
+
+      <div class="flex justify-between">
+        <button type="button" id="buttonStartSolving1" class="glass-card px-8 py-3 font-medium hover:bg-surfaceHover transition-colors">
+          &larr; Go Back
+        </button>
+        <button type="button" id="buttonStartSolving" class="bg-brandGreen text-background font-semibold px-8 py-3 rounded-full hover:bg-emerald-400 transition-colors">
+          Next &rarr;
+        </button>
+      </div>
+    </main>
+
+    <script>
       var frameContainer = document.getElementById("frameContainer");
       if (frameContainer) {
-        frameContainer.addEventListener("click", function (e) {
+        frameContainer.addEventListener("click", function () {
           window.location.href = "./wrong.html";
         });
       }
-      
+
       var frameContainer1 = document.getElementById("frameContainer1");
       if (frameContainer1) {
-        frameContainer1.addEventListener("click", function (e) {
+        frameContainer1.addEventListener("click", function () {
           window.location.href = "./right.html";
         });
       }
-      
+
       var frameContainer2 = document.getElementById("frameContainer2");
       if (frameContainer2) {
-        frameContainer2.addEventListener("click", function (e) {
+        frameContainer2.addEventListener("click", function () {
           window.location.href = "./wrong.html";
         });
       }
-      
+
       var frameContainer3 = document.getElementById("frameContainer3");
       if (frameContainer3) {
-        frameContainer3.addEventListener("click", function (e) {
+        frameContainer3.addEventListener("click", function () {
           window.location.href = "./wrong.html";
         });
       }
-      </script>
+
+      var buttonStartSolving = document.getElementById("buttonStartSolving");
+      if (buttonStartSolving) {
+        buttonStartSolving.addEventListener("click", function () {
+          window.location.href = "./quiz2.html";
+        });
+      }
+
+      var buttonStartSolving1 = document.getElementById("buttonStartSolving1");
+      if (buttonStartSolving1) {
+        buttonStartSolving1.addEventListener("click", function () {
+          window.location.href = "./desktop-12.html";
+        });
+      }
+    </script>
   </body>
 </html>

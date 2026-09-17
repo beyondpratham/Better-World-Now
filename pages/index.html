@@ -3,43 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap"
-    />
+    <title>BetterWorldNow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#0d1310',
+              brandGreen: '#10B981',
+              brandGold: '#FBBF24',
+            },
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <style>
+      @keyframes pulse-fade {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      .splash-pulse { animation: pulse-fade 1.8s ease-in-out infinite; }
+    </style>
   </head>
-  <body>
-    <div class="login">
-      <img class="image-17-icon" alt="" src="../images/image-17@2x.png" /><img
-        class="solid-white-1-icon"
-        alt=""
-        src="../images/solid-white-1@2x.png"
-      /><b class="login1">LOGIN</b
-      ><img
-        class="solid-color-image-1-icon"
-        alt=""
-        src="../images/solidcolorimage-1@2x.png"
-      /><img class="tree-1-icon" alt="" src="../images/tree.gif" /><b
-        class="betterworldnow"
-        >BetterWorldNow</b
-      >
-      <div class="logo-shape">
-        <div class="logo-shape-child"></div>
-        <div class="logo-shape-item"></div>
-      </div>
+  <body class="bg-background text-white min-h-screen font-sans flex items-center justify-center">
+    <div class="flex items-center gap-3 splash-pulse">
+      <div class="w-10 h-12 bg-brandGreen rounded-md"></div>
+      <span class="text-3xl font-bold tracking-tight">BetterWorldNow</span>
     </div>
 
-    <script src="../js/page-scale.js"></script>
     <script>
-      setTimeout(function() {
+      setTimeout(function () {
         window.location.href = "./index1.html";
-      }, 4600);
+      }, 2200);
     </script>
   </body>
 </html>

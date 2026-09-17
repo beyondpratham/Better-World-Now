@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="../css/global.css" /> -->
-    <link rel="stylesheet" href="../css/contri.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Port Lligat Sans:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"
-    />
-
-</head>
-<body>
-
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contribute More</h1>
-                    <p>You can contribute in follwing ways:</p>
-                    <p>1. Planting a tree sapling.</p>
-                    <p>2. Segregating waste before disposal.</p>
-                    <p>3. Following 3R's (Recycle, Reduce, Reuse).</p>
-                    <p>4. Other kinds of contribution can also be made, and would be approved if valid.<br><br> <a href = "https://oceanservice.noaa.gov/ocean/earthday.html"> Know more</a></p>
-                    <div class="social-icons">
-                
-                    </div>
-                    
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="emailid" required>
-                        <textarea name="Message" rows="6" placeholder="Description of your good deed"></textarea>
-                        <button type="submit"> Add Image</button>
-                        <br><br>
-                        <button type="submit" class="btn btn2">Submit</button>
-
-                    </form>
-                </div>
-            </div>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Contribute More - BetterWorldNow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#0d1310',
+              surface: 'rgba(255, 255, 255, 0.03)',
+              surfaceHover: 'rgba(255, 255, 255, 0.08)',
+              brandGreen: '#10B981',
+              brandGold: '#FBBF24',
+            },
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body class="bg-background text-white min-h-screen font-sans">
+    <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="./home-after-login.html" class="flex items-center gap-2">
+          <div class="w-6 h-8 bg-brandGreen rounded-sm"></div>
+          <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
+        </a>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="./desktop-12.html" class="hover:text-white transition-colors">Resources</a>
+          <a href="./leaderboard.html" class="hover:text-white transition-colors">LeaderBoard</a>
+          <a href="./home-after-login.html" class="hover:text-white transition-colors">About us</a>
+          <a href="./blog.html" class="hover:text-white transition-colors">Blog</a>
         </div>
-    </div>
-    
-</body>
+        <a href="./profile.html" class="flex items-center gap-2 text-sm border border-white/10 px-4 py-2 rounded-full hover:bg-surface transition-all">
+          <span>My Profile</span>
+        </a>
+      </div>
+    </nav>
+
+    <main class="pt-32 pb-20 max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+      <div>
+        <h1 class="text-3xl font-bold mb-6">Contribute More</h1>
+        <p class="text-gray-400 mb-4">You can contribute in the following ways:</p>
+        <ol class="list-decimal list-inside text-gray-300 space-y-2 mb-6">
+          <li>Planting a tree sapling.</li>
+          <li>Segregating waste before disposal.</li>
+          <li>Following the 3 R's (Recycle, Reduce, Reuse).</li>
+          <li>Other kinds of contribution can also be made, and would be approved if valid.</li>
+        </ol>
+        <a href="https://oceanservice.noaa.gov/ocean/earthday.html" target="_blank" class="text-brandGold font-semibold hover:text-brandGreen transition-colors">
+          Know more &rarr;
+        </a>
+      </div>
+
+      <div class="glass-card p-8">
+        <h2 class="text-xl font-bold mb-6">Log your good deed</h2>
+        <form class="flex flex-col gap-4">
+          <input type="text" name="Name" placeholder="Your Name" class="bwn-input" required />
+          <input type="email" name="Email" placeholder="Email ID" class="bwn-input" required />
+          <textarea name="Message" rows="5" placeholder="Description of your good deed" class="bwn-input"></textarea>
+          <button type="button" class="glass-card py-3 font-medium hover:bg-surfaceHover transition-colors">Add Image</button>
+          <button type="submit" class="bg-brandGreen text-background font-semibold py-3 rounded-full hover:bg-emerald-400 transition-colors">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>

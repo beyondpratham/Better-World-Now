@@ -3,144 +3,86 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/coupon.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Port Lligat Sans:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"
-    />
-  </head>
-  <body>
-    <div class="coupon">
-      <img class="image-21-icon" alt="" src="../images/image-21@2x.png" />
-      <div class="logo-shape11" id="logoShapeContainer">
-        <div class="logo-shape-child19"></div>
-        <div class="logo-shape-child20"></div>
-      </div>
-      <img
-        class="coupon-child"
-        alt=""
-        src="../icons/rectangle-12942.svg"
-        id="rectangle2"
-      />
-      <div class="header6">
-        <b class="about-us8" id="aboutUsText">About us</b
-        ><b class="equipment22">LeaderBoard</b
-        ><b class="equipment23" id="equipmentText1">Resources</b
-        ><b class="account8">My Profile</b
-        ><img
-          class="icons-general-cart8"
-          alt=""
-          src="../icons/icons-general--cart.svg"
-        />
-        <div class="logo8" id="logoContainer">
-          <div class="betterworldnow9">BetterWorldNow</div>
-        </div>
-        <b class="blog8" id="blogText">Blog</b
-        ><b class="equipment24" id="equipmentText2">LeaderBoard</b>
-      </div>
-      <img class="image-29-icon" alt="" src="../images/image-29@2x.png" /><a
-        class="free-plant-from"
-        href="https://www.grabon.in/nurserylive-coupons/"
-        target="_blank"
-        >Free Plant from Nurserylive</a
-      ><img class="image-32-icon" alt="" src="../images/image-29@2x.png" />
-      <div class="of-on-nurserylive-container">
-        20% of
-        <a
-          class="on-nurserylive"
-          href="https://www.grabon.in/nurserylive-coupons/"
-          target="_blank"
-          ><span class="on-nurserylive1">on Nurserylive</span></a
-        >
-      </div>
-      <div class="free-plant-from-container">
-        <a
-          class="on-nurserylive"
-          href="https://www.grabon.in/nurserylive-coupons/"
-          target="_blank"
-          ><span class="on-nurserylive1">Free Plant from </span></a
-        >OZIVA
-      </div>
-      <a
-        class="free-plant-from3"
-        href="https://www.plants.com/c/flowering-plants"
-        target="_blank"
-        >Free Plant from Plans.com</a
-      ><img class="image-30-icon" alt="" src="../images/image-30@2x.png" /><a
-        class="discount-on-plants"
-        href="https://www.fnp.com/offers/coupons-and-deals"
-        target="_blank"
-        >15% discount on plants from fnp</a
-      ><img class="image-31-icon" alt="" src="../images/image-31@2x.png" /><img
-        class="image-33-icon"
-        alt=""
-        src="../images/image-33@2x.png"
-      />
-    </div>
-
-    <script src="../js/page-scale.js"></script>
+    <title>Rewards - BetterWorldNow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      var rectangle2 = document.getElementById("rectangle2");
-      if (rectangle2) {
-        rectangle2.addEventListener("click", function (e) {
-          window.location.href = "./profile.html";
-        });
-      }
-      
-      var aboutUsText = document.getElementById("aboutUsText");
-      if (aboutUsText) {
-        aboutUsText.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var equipmentText1 = document.getElementById("equipmentText1");
-      if (equipmentText1) {
-        equipmentText1.addEventListener("click", function (e) {
-          window.location.href = "./desktop-12.html";
-        });
-      }
-      
-      var logoContainer = document.getElementById("logoContainer");
-      if (logoContainer) {
-        logoContainer.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var logoShapeContainer = document.getElementById("logoShapeContainer");
-      if (logoShapeContainer) {
-        logoShapeContainer.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var blogText = document.getElementById("blogText");
-      if (blogText) {
-        blogText.addEventListener("click", function (e) {
-          window.location.href = "./blog.html";
-        });
-      }
-      
-      var equipmentText2 = document.getElementById("equipmentText2");
-      if (equipmentText2) {
-        equipmentText2.addEventListener("click", function (e) {
-          window.location.href = "./leaderboard.html";
-        });
-      }
-      </script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#0d1310',
+              surface: 'rgba(255, 255, 255, 0.03)',
+              surfaceHover: 'rgba(255, 255, 255, 0.08)',
+              brandGreen: '#10B981',
+              brandGold: '#FBBF24',
+            },
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body class="bg-background text-white min-h-screen font-sans">
+    <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="./home-after-login.html" class="flex items-center gap-2">
+          <div class="w-6 h-8 bg-brandGreen rounded-sm"></div>
+          <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
+        </a>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="./desktop-12.html" class="hover:text-white transition-colors">Resources</a>
+          <a href="./leaderboard.html" class="hover:text-white transition-colors">LeaderBoard</a>
+          <a href="./home-after-login.html" class="hover:text-white transition-colors">About us</a>
+          <a href="./blog.html" class="hover:text-white transition-colors">Blog</a>
+        </div>
+        <a href="./profile.html" class="flex items-center gap-2 text-sm border border-white/10 px-4 py-2 rounded-full hover:bg-surface transition-all">
+          <span>My Profile</span>
+        </a>
+      </div>
+    </nav>
+
+    <main class="pt-40 pb-32 max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-2">Rewards</h2>
+      <p class="text-gray-400 mb-10">Redeem the points you've earned for real eco-friendly perks.</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="https://www.grabon.in/nurserylive-coupons/" target="_blank" class="glass-card p-6 flex items-center justify-between hover:border-brandGreen/40 hover:bg-surfaceHover transition-all">
+          <div>
+            <span class="text-brandGold text-xs font-semibold uppercase tracking-wide">20% Off</span>
+            <h3 class="font-semibold text-lg mt-1">Free Plant from Nurserylive</h3>
+          </div>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+
+        <a href="https://www.grabon.in/nurserylive-coupons/" target="_blank" class="glass-card p-6 flex items-center justify-between hover:border-brandGreen/40 hover:bg-surfaceHover transition-all">
+          <div>
+            <span class="text-brandGold text-xs font-semibold uppercase tracking-wide">Free Gift</span>
+            <h3 class="font-semibold text-lg mt-1">Free Plant from OZIVA</h3>
+          </div>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+
+        <a href="https://www.plants.com/c/flowering-plants" target="_blank" class="glass-card p-6 flex items-center justify-between hover:border-brandGreen/40 hover:bg-surfaceHover transition-all">
+          <div>
+            <span class="text-brandGold text-xs font-semibold uppercase tracking-wide">Free Gift</span>
+            <h3 class="font-semibold text-lg mt-1">Free Plant from Plants.com</h3>
+          </div>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+
+        <a href="https://www.fnp.com/offers/coupons-and-deals" target="_blank" class="glass-card p-6 flex items-center justify-between hover:border-brandGreen/40 hover:bg-surfaceHover transition-all">
+          <div>
+            <span class="text-brandGold text-xs font-semibold uppercase tracking-wide">15% Off</span>
+            <h3 class="font-semibold text-lg mt-1">Discount on plants from FNP</h3>
+          </div>
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <a href="./profile.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white mt-10 transition-colors">
+        &larr; Back to Profile
+      </a>
+    </main>
   </body>
 </html>

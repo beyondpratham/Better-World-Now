@@ -3,121 +3,62 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/progress.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Port Lligat Sans:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Advent Pro:wght@400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"
-    />
+    <title>Track Progress - BetterWorldNow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#0d1310',
+              surface: 'rgba(255, 255, 255, 0.03)',
+              surfaceHover: 'rgba(255, 255, 255, 0.08)',
+              brandGreen: '#10B981',
+              brandGold: '#FBBF24',
+            },
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../css/theme.css" />
   </head>
-  <body>
-    <div class="progress">
-      <img
-        class="plantgrow-1-icon1"
-        alt=""
-        src="../images/plantgrow.gif"
-        id="plantgrow1Image"
-      />
-      <div class="progress-child" id="rectangle"></div>
-      <b class="track-your-trees-container"
-        ><p class="track-your">TRACK YOUR</p>
-        <p class="track-your">TREE’S PROGRESS</p></b
-      >
-      <div class="ellipse-parent">
-        <img class="group-child" alt="" src="../icons/ellipse-121.svg" /><img
-          class="sapling-with-leaves-svgrepo-co-icon"
-          alt=""
-          src="../images/saplingwithleavessvgrepocom-1@2x.png"
-        />
+  <body class="bg-background text-white min-h-screen font-sans">
+    <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="./home-after-login.html" class="flex items-center gap-2">
+          <div class="w-6 h-8 bg-brandGreen rounded-sm"></div>
+          <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
+        </a>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="./desktop-12.html" class="hover:text-white transition-colors">Resources</a>
+          <a href="./leaderboard.html" class="hover:text-white transition-colors">LeaderBoard</a>
+          <a href="./home-after-login.html" class="hover:text-white transition-colors">About us</a>
+          <a href="./blog.html" class="hover:text-white transition-colors">Blog</a>
+        </div>
+        <a href="./profile.html" class="flex items-center gap-2 text-sm border border-white/10 px-4 py-2 rounded-full hover:bg-surface transition-all">
+          <span>My Profile</span>
+        </a>
       </div>
-      <div class="logo-shape10" id="logoShapeContainer">
-        <div class="logo-shape-child17"></div>
-        <div class="logo-shape-child18"></div>
-      </div>
-      <b class="about-us7" id="aboutUsText">About us</b
-      ><b class="equipment20" id="equipmentText">Resources</b
-      ><b class="account7">My Profile</b
-      ><img
-        class="icons-general-cart7"
-        alt=""
-        src="../icons/icons-general--cart1.svg"
-      />
-      <div class="logo7" id="logoContainer">
-        <div class="betterworldnow8">BetterWorldNow</div>
-      </div>
-      <b class="blog7" id="blogText">Blog</b
-      ><b class="equipment21" id="equipmentText1">LeaderBoard</b>
-    </div>
+    </nav>
 
-    <script src="../js/page-scale.js"></script>
+    <main class="pt-40 pb-32 max-w-2xl mx-auto px-6 flex flex-col items-center text-center">
+      <span class="text-brandGold text-sm tracking-[0.2em] font-semibold uppercase mb-3">Track Your Tree's Progress</span>
+      <div class="glass-card p-10 w-full mt-6">
+        <img id="plantgrow1Image" src="../images/plantgrow.gif" alt="" class="w-40 h-40 object-contain mx-auto mb-6 cursor-pointer" />
+        <a href="./progress2.html" id="rectangle" class="inline-flex items-center gap-2 bg-brandGreen text-background font-semibold px-8 py-3 rounded-full hover:bg-emerald-400 transition-colors">
+          See Current Growth &rarr;
+        </a>
+      </div>
+    </main>
+
     <script>
       var plantgrow1Image = document.getElementById("plantgrow1Image");
       if (plantgrow1Image) {
-        plantgrow1Image.addEventListener("click", function (e) {
+        plantgrow1Image.addEventListener("click", function () {
           window.location.href = "./profile.html";
         });
       }
-      
-      var rectangle = document.getElementById("rectangle");
-      if (rectangle) {
-        rectangle.addEventListener("click", function (e) {
-          window.location.href = "./progress2.html";
-        });
-      }
-      
-      var aboutUsText = document.getElementById("aboutUsText");
-      if (aboutUsText) {
-        aboutUsText.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var equipmentText = document.getElementById("equipmentText");
-      if (equipmentText) {
-        equipmentText.addEventListener("click", function (e) {
-          window.location.href = "./desktop-12.html";
-        });
-      }
-      
-      var logoContainer = document.getElementById("logoContainer");
-      if (logoContainer) {
-        logoContainer.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var logoShapeContainer = document.getElementById("logoShapeContainer");
-      if (logoShapeContainer) {
-        logoShapeContainer.addEventListener("click", function (e) {
-          window.location.href = "./home-after-login.html";
-        });
-      }
-      
-      var blogText = document.getElementById("blogText");
-      if (blogText) {
-        blogText.addEventListener("click", function (e) {
-          window.location.href = "./blog.html";
-        });
-      }
-      
-      var equipmentText1 = document.getElementById("equipmentText1");
-      if (equipmentText1) {
-        equipmentText1.addEventListener("click", function (e) {
-          window.location.href = "./leaderboard.html";
-        });
-      }
-      </script>
+    </script>
   </body>
 </html>
