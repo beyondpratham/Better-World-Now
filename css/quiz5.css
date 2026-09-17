@@ -223,3 +223,83 @@
   color: var(--wei);
   font-family: var(--font-advent-pro);
 }
+/* Real, clickable nav header (matches quiz1.css) -- replaces a
+   frozen, non-interactive header.svg snapshot that never linked
+   anywhere and never picked up sitewide nav styling. */
+.about-us4,
+.equipment12 {
+  position: absolute;
+  top: 2px;
+}
+.about-us4 {
+  left: 868px;
+  cursor: pointer;
+}
+.equipment12 {
+  left: 738px;
+  visibility: hidden;
+}
+.account4,
+.equipment13 {
+  position: absolute;
+}
+.equipment13 {
+  top: 0;
+  left: 608px;
+}
+.account4 {
+  top: 2px;
+  left: 1514px;
+  font-size: var(--font-size-mid);
+  display: inline-block;
+  width: 78px;
+  cursor: pointer;
+}
+.icons-general-cart4 {
+  position: absolute;
+  top: 0;
+  left: 1484px;
+  width: 24px;
+  height: 24px;
+}
+.betterworldnow5 {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 456px;
+}
+.blog4,
+.equipment14,
+.logo4 {
+  position: absolute;
+  cursor: pointer;
+}
+.logo4 {
+  top: 0;
+  left: 0;
+  width: 227px;
+  height: 24px;
+  overflow: hidden;
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-port-lligat-sans);
+}
+.blog4 {
+  top: 2px;
+  left: 983px;
+}
+.equipment14 {
+  top: 2px;
+  left: 738px;
+}
+.header4 {
+  position: absolute;
+  top: 64px;
+  left: 80px;
+  width: 1648px;
+  height: 25px;
+  overflow: hidden;
+  font-size: var(--font-size-lg);
+}

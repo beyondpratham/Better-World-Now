@@ -157,7 +157,7 @@
 .background4 {
   top: 563px;
   background-color: var(--wei);
-  width: 1064px;
+  width: 1600px;
   height: 399px;
   border-radius: var(--br-11xl);
 }
@@ -359,6 +359,13 @@
   height: 366px;
   object-fit: cover;
   border-radius: var(--br-11xl);
+}
+.image-13-icon {
+  /* Sits inside the widened "My Journey" card, next to its text,
+     vertically centered within the card instead of floating over
+     the dark hero photo above it. */
+  top: 580px;
+  left: 994px;
 }
 .image-14-icon {
   top: 1366px;

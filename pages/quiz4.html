@@ -91,7 +91,23 @@
         class="quiz4-item"
         alt=""
         src="../icons/rectangle-1294.svg"
-      /><img class="header-icon1" alt="" src="../icons/header.svg" />
+      />
+      <div class="header4">
+        <b class="about-us4" id="aboutUsText">About us</b
+        ><b class="equipment12">LeaderBoard</b
+        ><b class="equipment13">Resources</b
+        ><b class="account4" id="accountText">My Profile</b
+        ><img
+          class="icons-general-cart4"
+          alt=""
+          src="../icons/icons-general--cart.svg"
+        />
+        <div class="logo4" id="logoContainer">
+          <div class="betterworldnow5">BetterWorldNow</div>
+        </div>
+        <b class="blog4" id="blogText">Blog</b
+        ><b class="equipment14" id="equipmentText2">LeaderBoard</b>
+      </div>
     </div>
 
     <script src="../js/page-scale.js"></script>
@@ -135,6 +151,41 @@
       if (buttonStartSolving1) {
         buttonStartSolving1.addEventListener("click", function (e) {
           window.location.href = "./quiz3.html";
+        });
+      }
+
+      var aboutUsText = document.getElementById("aboutUsText");
+      if (aboutUsText) {
+        aboutUsText.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+
+      var accountText = document.getElementById("accountText");
+      if (accountText) {
+        accountText.addEventListener("click", function (e) {
+          window.location.href = "./profile.html";
+        });
+      }
+
+      var logoContainer = document.getElementById("logoContainer");
+      if (logoContainer) {
+        logoContainer.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+
+      var blogText = document.getElementById("blogText");
+      if (blogText) {
+        blogText.addEventListener("click", function (e) {
+          window.location.href = "./blog.html";
+        });
+      }
+
+      var equipmentText2 = document.getElementById("equipmentText2");
+      if (equipmentText2) {
+        equipmentText2.addEventListener("click", function (e) {
+          window.location.href = "./leaderboard.html";
         });
       }
       </script>
