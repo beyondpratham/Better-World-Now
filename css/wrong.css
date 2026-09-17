@@ -47,6 +47,7 @@
   top: 155px;
   left: 360px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
   background-color: #ff6464;
   border: 10px solid #bc1010;
   box-sizing: border-box;
@@ -61,6 +62,7 @@
   height: 495px;
   object-fit: cover;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .tagline1 {
   position: absolute;

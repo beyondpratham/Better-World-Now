@@ -25,7 +25,7 @@
   <body>
     <div class="coupon">
       <img class="image-21-icon" alt="" src="../images/image-21@2x.png" />
-      <div class="logo-shape11">
+      <div class="logo-shape11" id="logoShapeContainer">
         <div class="logo-shape-child19"></div>
         <div class="logo-shape-child20"></div>
       </div>
@@ -117,6 +117,13 @@
       var logoContainer = document.getElementById("logoContainer");
       if (logoContainer) {
         logoContainer.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

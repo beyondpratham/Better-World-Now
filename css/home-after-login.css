@@ -158,6 +158,8 @@
   top: 359px;
   left: 80px;
   height: 173px;
+  border-radius: var(--br-xl);
+  box-shadow: 0 0 0 14px rgba(11, 29, 38, 0.4), var(--shadow-elevated);
 }
 .at-betterworldnow-we1 {
   margin: 0;
@@ -166,6 +168,7 @@
   position: absolute;
   top: 201px;
   left: -3px;
+  font-size: var(--font-size-11xl);
   line-height: 32px;
   display: inline-block;
   font-family: var(--font-manrope);
@@ -259,6 +262,7 @@
   object-fit: cover;
   opacity: 0;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .join-us-in2 {
   position: absolute;
@@ -372,7 +376,7 @@
 }
 .footer3 {
   position: absolute;
-  top: 4117px;
+  top: 3759px;
   left: 164px;
   width: 1401px;
   height: 188px;
@@ -387,6 +391,7 @@
   object-fit: cover;
   opacity: 0;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .doing-well-by1 {
   position: absolute;
@@ -426,7 +431,7 @@
   line-height: 32px;
   font-family: var(--font-manrope);
   width: 742px;
-  height: 227px;
+  height: 360px;
 }
 .iconnavigationarrow-downward4 {
   position: absolute;
@@ -440,7 +445,7 @@
   position: absolute;
 }
 .more4 {
-  top: 697px;
+  top: 760px;
   left: 0;
   width: 157.14px;
   height: 22.87px;
@@ -453,6 +458,7 @@
   object-fit: cover;
   opacity: 0;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .content11 {
   position: absolute;
@@ -553,7 +559,7 @@
   background-color: var(--bg);
   box-shadow: var(--shadow);
   width: 1728px;
-  height: 4595px;
+  height: 4237px;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-lg);

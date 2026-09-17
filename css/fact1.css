@@ -21,6 +21,7 @@
   width: 1577px;
   height: 393px;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .line1 {
   position: absolute;
@@ -158,6 +159,7 @@
   top: 66px;
   left: 682px;
   border-radius: var(--br-8xl);
+  box-shadow: var(--shadow-elevated);
   width: 83px;
   height: 22px;
 }

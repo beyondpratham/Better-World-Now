@@ -58,7 +58,7 @@
           accidental deaths, such as getting caught in fishing nets. Plastic bags and other plastic garbage that ends up in the ocean kill over 1,000,000 sea animals every year.<br>
         </p>
       </div>
-      <div class="logo-shape3">
+      <div class="logo-shape3" id="logoShapeContainer">
         <div class="logo-shape-child3"></div>
         <div class="logo-shape-child4"></div>
       </div>
@@ -111,6 +111,13 @@
       var logoContainer = document.getElementById("logoContainer");
       if (logoContainer) {
         logoContainer.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

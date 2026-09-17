@@ -89,7 +89,7 @@
           >
         </div>
       </div>
-      <div class="logo-shape14">
+      <div class="logo-shape14" id="logoShapeContainer">
         <div class="logo-shape-child25"></div>
         <div class="logo-shape-child26"></div>
       </div>
@@ -188,6 +188,13 @@
       var logoContainer1 = document.getElementById("logoContainer1");
       if (logoContainer1) {
         logoContainer1.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

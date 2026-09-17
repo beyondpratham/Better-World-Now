@@ -68,6 +68,8 @@ a{
   left: 80px;
   height: 173px;
   color: var(--wei);
+  border-radius: var(--br-xl);
+  box-shadow: 0 0 0 14px rgba(11, 29, 38, 0.4), var(--shadow-elevated);
 }
 .recent-contribution-by {
   position: absolute;
@@ -145,7 +147,7 @@ a{
   height: 22.87px;
 }
 .content5 {
-  top: 1550px;
+  top: 900px;
   left: 133px;
   width: 1462px;
   height: 720px;
@@ -234,23 +236,15 @@ a{
   max-height: 100%;
   object-fit: cover;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .content6 {
   position: absolute;
-  top: 2470px;
+  top: 1820px;
   left: 133px;
   width: 1462px;
   height: 720px;
   color: var(--accent);
-}
-.image-4-icon {
-  position: absolute;
-  top: 243px;
-  left: 701px;
-  border-radius: 500px;
-  width: 380px;
-  height: 366px;
-  object-fit: cover;
 }
 .profile-child {
   cursor: pointer;
@@ -261,117 +255,137 @@ a{
   top: 49px;
   left: 1531px;
   border-radius: var(--br-8xl);
+  box-shadow: var(--shadow-elevated);
   width: 156px;
   height: 56px;
 }
-.image-6-icon,
-.image-7-icon {
+.profile-card {
   position: absolute;
+  top: 240px;
+  left: 264px;
+  width: 1200px;
+  height: 380px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 0 64px;
+  background-color: var(--color-dark-green);
+  border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
+}
+.profile-photo-col {
+  flex-shrink: 0;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.image-4-icon {
+  position: relative;
+  border-radius: 500px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-}
-.image-6-icon {
-  top: 761px;
-  left: 200px;
-  border-radius: 60px;
-  width: 1367px;
-  height: 509px;
+  box-shadow: var(--shadow-elevated);
 }
 .image-7-icon {
-  top: 18px;
-  left: 667px;
-  width: 373px;
-  height: 299px;
-  border-radius: var(--br-xl);
+  position: relative;
+  width: 140px;
+  height: auto;
+  object-fit: contain;
 }
-.profile-item {
-  position: absolute;
-  top: 1424px;
-  left: 331px;
-  border-radius: var(--br-11xl);
-  background-color: var(--green);
-  width: 251px;
-  height: 72px;
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--wei);
+  font-family: var(--font-manrope);
 }
-.rewards {
-  position: absolute;
-  top: 1441px;
-  left: 396px;
+.profile-heading {
+  font-family: var(--font-port-lligat-sans);
   font-size: var(--font-size-13xl);
+  color: var(--accent);
+}
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 16px;
+}
+.profile-label {
+  font-size: var(--font-size-mid);
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.02em;
+}
+.profile-value {
+  font-size: var(--font-size-mid);
   font-weight: 600;
-  cursor: pointer;
+  color: var(--wei);
 }
-/*  */
-/* .rewards:hover{
-  color: #fff;
-} */
-/*  */
-.profile-inner {
-  position: absolute;
-  top: 1424px;
-  left: 611px;
-  border-radius: var(--br-11xl);
-  background-color: var(--green);
-  width: 251px;
-  height: 72px;
-}
-.set-your-goals {
-  position: absolute;
-  top: 1441px;
-  left: 638px;
-  font-size: var(--font-size-13xl);
-  font-weight: 600;
-  cursor: pointer;
-}
-.profile-child1 {
-  position: absolute;
-  top: 1424px;
-  left: 891px;
-  border-radius: var(--br-11xl);
-  background-color: var(--green);
-  width: 251px;
-  height: 72px;
-}
-.track-progress {
-  position: absolute;
-  top: 1441px;
-  left: 923px;
-  font-size: var(--font-size-13xl);
-  font-weight: 600;
-  cursor: pointer;
-}
+.profile-item,
+.profile-inner,
+.profile-child1,
 .profile-child2 {
   position: absolute;
-  top: 1424px;
-  left: 1171px;
+  top: 774px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
   background-color: var(--green);
   width: 251px;
   height: 72px;
-}
-/*  */
-.profile-item:hover, .profile-inner:hover, .profile-child1:hover, .profile-child2:hover{
-  transform: scale(1.05);
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 100px 0px #fff;
-  -moz-box-shadow: 0px 0px 100px 0px #fff;
-  box-shadow: 0px 0px 100px 0px #fff;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
-/*  */
+.profile-item {
+  left: 331px;
+}
+.profile-inner {
+  left: 611px;
+}
+.profile-child1 {
+  left: 891px;
+}
+.profile-child2 {
+  left: 1171px;
+}
+.rewards,
+.set-your-goals,
+.track-progress,
 .contribute-more {
-  position: absolute;
-  top: 1441px;
-  left: 1201px;
   font-size: var(--font-size-13xl);
   font-weight: 600;
+  cursor: pointer;
+}
+.profile-item:hover,
+.profile-inner:hover,
+.profile-child1:hover,
+.profile-child2:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
+.profile-item:hover .rewards,
+.profile-inner:hover .set-your-goals,
+.profile-child1:hover .track-progress,
+.profile-child2:hover .contribute-more {
+  background-color: rgba(255, 255, 255, 0.16);
 }
 .image-8-icon {
   position: absolute;
-  top: 1643px;
+  top: 993px;
   left: 987px;
   width: 632px;
   height: 695px;
   object-fit: cover;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .betterworldnow16 {
   position: absolute;
@@ -474,7 +488,7 @@ a{
 }
 .footer2 {
   position: absolute;
-  top: 2798.19px;
+  top: 2148.19px;
   left: 164px;
   width: 1401px;
   height: 895.81px;
@@ -484,19 +498,15 @@ a{
 .logo-shape19,
 .logo-shape20 {
   position: absolute;
-  height: 0.69%;
-  width: 1.5%;
-  top: 92.55%;
-  right: 88.95%;
-  bottom: 6.76%;
-  left: 9.55%;
+  height: 26px;
+  width: 26px;
+  top: 2864.6px;
+  left: 165px;
 }
 .logo-shape20 {
-  height: 0.87%;
-  top: 1.55%;
-  right: 95.95%;
-  bottom: 97.57%;
-  left: 2.55%;
+  height: 33px;
+  top: 58.87px;
+  left: 44px;
 }
 .about-us12 {
   position: absolute;
@@ -576,7 +586,7 @@ a{
   background-color: var(--bg);
   box-shadow: var(--shadow);
   width: 1728px;
-  height: 3798px;
+  height: 3148px;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-lg);

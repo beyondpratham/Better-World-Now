@@ -90,6 +90,9 @@
   height: 85px;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .vector-parent6 {
   top: 495px;
@@ -102,6 +105,9 @@
   height: 85px;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .vector-parent6 {
   left: 908px;

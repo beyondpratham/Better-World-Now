@@ -36,7 +36,7 @@
           <br>One of the best ways to cut down on single-use bags-both paper and plastic-is to switch to reusable ones.
         </p>
       </div>
-      <div class="logo-shape">
+      <div class="logo-shape" id="logoShapeContainer">
         <div class="logo-shape-child"></div>
         <div class="logo-shape-item"></div>
       </div>
@@ -113,6 +113,13 @@
       var logoContainer = document.getElementById("logoContainer");
       if (logoContainer) {
         logoContainer.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

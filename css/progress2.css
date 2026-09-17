@@ -6,6 +6,7 @@
   height: 854px;
   object-fit: cover;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .progress2-child {
   position: absolute;
@@ -15,6 +16,7 @@
   width: 358px;
   height: 383px;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .your {
   margin: 0;

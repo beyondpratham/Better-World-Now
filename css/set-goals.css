@@ -15,6 +15,7 @@
   height: 79px;
   cursor: pointer;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .set-goals-item {
   position: absolute;
@@ -24,6 +25,7 @@
   width: 536px;
   height: 80px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .save-for-now {
   position: absolute;
@@ -48,6 +50,7 @@
   width: 208px;
   height: 80px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .submit {
   top: 826px;
@@ -113,6 +116,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .set-goals-child1 {
   position: absolute;
@@ -122,6 +126,7 @@
   width: 536px;
   height: 79px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .goal2 {
   position: absolute;
@@ -135,6 +140,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .set-goals-child2 {
   position: absolute;
@@ -144,6 +150,7 @@
   width: 536px;
   height: 78px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .goal3 {
   position: absolute;
@@ -157,6 +164,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .set-goals-child3 {
   position: absolute;
@@ -166,6 +174,7 @@
   width: 536px;
   height: 80px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .goal4 {
   position: absolute;
@@ -179,6 +188,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .logo-shape-child1,
 .logo-shape-child2 {

@@ -17,6 +17,7 @@
   top: 66px;
   left: 806px;
   border-radius: var(--br-8xl);
+  box-shadow: var(--shadow-elevated);
   width: 116px;
   height: 22px;
 }
@@ -53,9 +54,91 @@
   top: 254px;
   left: 284px;
   width: 1160px;
-  height: 632px;
-  object-fit: cover;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-dark-green);
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
+  font-family: var(--font-advent-pro);
+}
+.lb-row {
+  display: grid;
+  grid-template-columns: 0.7fr 1.4fr 1.3fr 1fr 0.9fr 1.1fr 0.9fr;
+  align-items: center;
+  border-radius: var(--br-xl);
+  padding: 18px 24px;
+}
+.lb-header-row {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--wei);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-size-mid);
+  font-weight: 700;
+}
+.lb-row:not(.lb-header-row) {
+  background-color: var(--green);
+  color: var(--bg);
+  font-size: var(--font-size-mid);
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.lb-row:not(.lb-header-row):hover {
+  transform: scale(1.015);
+  box-shadow: var(--shadow-elevated);
+}
+.lb-col-name {
+  display: flex;
+  align-items: center;
+}
+.lb-avatar {
+  position: relative;
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  margin-right: 16px;
+  border-radius: 7px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lb-avatar-head,
+.lb-avatar-body {
+  position: absolute;
+  background-color: var(--bg);
+  transform: rotate(-45deg);
+}
+.lb-avatar-head {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 6px;
+  left: 11px;
+}
+.lb-avatar-body {
+  width: 20px;
+  height: 14px;
+  border-radius: 10px 10px 0 0;
+  bottom: 4px;
+  left: 7px;
+}
+.lb-avatar-1 {
+  background-color: #5b6ee1;
+}
+.lb-avatar-2 {
+  background-color: #f4b400;
+}
+.lb-avatar-3 {
+  background-color: #ff6f3c;
+}
+.lb-avatar-4 {
+  background-color: #5b8def;
+}
+.lb-avatar-5 {
+  background-color: #ab47bc;
 }
 .check-your-ranking,
 .leader-board {

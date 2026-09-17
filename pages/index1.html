@@ -35,7 +35,7 @@
           products to exclusive access to events and experiences. So why not
           join our community of changemakers and start making a difference
           today?</b
-        ><img class="more-icon" alt="" /><img
+        ><img class="more-icon" alt="" src="../icons/iconnavigationarrow-downward-24px2.svg" /><img
           class="image-16-icon"
           alt=""
           src="../images/image-16@2x.png"
@@ -43,7 +43,7 @@
       </div>
       <img class="hg-icon" alt="" src="../images/hg@2x.png" />
       <div class="bg-hero1"></div>
-      <div class="logo-shape16">
+      <div class="logo-shape16" id="logoShapeContainer">
         <div class="logo-shape-child29"></div>
         <div class="logo-shape-child30"></div>
       </div>
@@ -189,6 +189,13 @@
       var logoContainer1 = document.getElementById("logoContainer1");
       if (logoContainer1) {
         logoContainer1.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

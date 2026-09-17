@@ -36,14 +36,14 @@
   display: inline-block;
   font-family: var(--font-manrope);
   width: 742px;
-  height: 227px;
+  height: 360px;
 }
 .image-16-icon,
 .more-icon {
   position: absolute;
 }
 .more-icon {
-  top: 700.12px;
+  top: 758.12px;
   left: 127.45px;
   width: 29.7px;
   height: 16.63px;
@@ -56,6 +56,7 @@
   object-fit: cover;
   opacity: 0;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .content1 {
   position: absolute;
@@ -229,6 +230,8 @@
   top: 359px;
   left: 80px;
   height: 173px;
+  border-radius: var(--br-xl);
+  box-shadow: 0 0 0 14px rgba(11, 29, 38, 0.4), var(--shadow-elevated);
 }
 .at-betterworldnow-we {
   margin: 0;
@@ -237,6 +240,7 @@
   position: absolute;
   top: 201px;
   left: -3px;
+  font-size: var(--font-size-11xl);
   line-height: 32px;
   display: inline-block;
   font-family: var(--font-manrope);
@@ -342,6 +346,7 @@
   object-fit: cover;
   opacity: 0;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .content4 {
   position: absolute;
@@ -439,7 +444,7 @@
 }
 .footer1 {
   position: absolute;
-  top: 4104px;
+  top: 3849px;
   left: 175px;
   width: 1401px;
   height: 188px;
@@ -454,6 +459,7 @@
   object-fit: cover;
   opacity: 0;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .slide-in {
   animation: slide-in 1s ease forwards;
@@ -557,7 +563,7 @@
   background-color: var(--bg);
   box-shadow: var(--shadow);
   width: 1728px;
-  height: 4600px;
+  height: 4345px;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-lg);

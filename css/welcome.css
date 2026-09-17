@@ -19,6 +19,7 @@
   top: 588px;
   left: 1251px;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
   background-color: var(--green);
   width: 369px;
   height: 77px;

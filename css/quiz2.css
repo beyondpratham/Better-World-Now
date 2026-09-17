@@ -102,8 +102,10 @@
   width: 634px;
   height: 85px;
   overflow: hidden;
-  transition: scale .5s;
+  transition: transform 0.2s ease;
   cursor: pointer;
+  border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .vector-parent9 {
   top: 495px;
@@ -111,12 +113,6 @@
 }
 .vector-parent10 {
   left: 908px;
-}
-.vector-parent10:hover,
-.vector-parent11:hover,
-.vector-parent12:hover,
-.vector-parent9:hover {
-  scale: 1.03;
 }
 .vector-parent11 {
   top: 618px;

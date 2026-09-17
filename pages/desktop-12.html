@@ -29,7 +29,7 @@
         alt=""
         src="../icons/vector-4.svg"
       />
-      <div class="logo-shape6">
+      <div class="logo-shape6" id="logoShapeContainer">
         <div class="logo-shape-child9"></div>
         <div class="logo-shape-child10"></div>
       </div>
@@ -77,7 +77,12 @@
         href="https://unfccc.int/news?gclid=CjwKCAjwue6hBhBVEiwA9YTx8M4s60gg8W5C_npZim2AOj59JZPD2Tjh0Bs1aLWuFibkaQn5FeSCuBoCvUQQAvD_BwE"
         target="_blank"
         >Read Article</a
-      ><img class="image-28-icon" alt="" src="../images/image-28@2x.png" /><a
+      ><img
+        class="image-28-icon"
+        alt=""
+        src="../images/image-28@2x.png"
+        id="image28"
+      /><a
         class="watch-video"
         href="https://www.youtube.com/watch?v=W5bh1JFo43U"
         target="_blank"
@@ -108,6 +113,13 @@
       var logoContainer = document.getElementById("logoContainer");
       if (logoContainer) {
         logoContainer.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }
@@ -144,6 +156,13 @@
       if (image27) {
         image27.addEventListener("click", function (e) {
           window.location.href = "./blog.html";
+        });
+      }
+
+      var image28 = document.getElementById("image28");
+      if (image28) {
+        image28.addEventListener("click", function (e) {
+          window.open("https://www.youtube.com/watch?v=W5bh1JFo43U", "_blank");
         });
       }
       </script>

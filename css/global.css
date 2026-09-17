@@ -84,6 +84,7 @@ body > div:first-of-type {
 
   /* Effects */
   --shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+  --shadow-elevated: 0px 6px 18px rgba(0, 0, 0, 0.28);
 }
 
 /* Shared hover/focus affordance for every element the pages wire up

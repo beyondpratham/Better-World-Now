@@ -100,11 +100,14 @@
 }
 .about-text {
   position: absolute;
-  top: 1034px;
+  top: 1024px;
   left: 173px;
   width: 1387px;
-  height: 169px;
+  height: 195px;
   overflow: hidden;
+  background-color: var(--color-dark-green);
+  border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
   font-size: var(--font-size-11xl);
   font-family: var(--font-port-lligat-sans);
 }
@@ -160,6 +163,7 @@
   width: 1600px;
   height: 399px;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .duurzame-materialen {
   position: relative;
@@ -226,6 +230,7 @@
   top: 66px;
   left: 1048px;
   border-radius: var(--br-8xl);
+  box-shadow: var(--shadow-elevated);
   width: 61px;
   height: 22px;
 }
@@ -359,6 +364,7 @@
   height: 366px;
   object-fit: cover;
   border-radius: var(--br-11xl);
+  box-shadow: var(--shadow-elevated);
 }
 .image-13-icon {
   /* Sits inside the widened "My Journey" card, next to its text,

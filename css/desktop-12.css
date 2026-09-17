@@ -48,6 +48,7 @@
   top: 66px;
   left: 682px;
   border-radius: var(--br-8xl);
+  box-shadow: var(--shadow-elevated);
   width: 83px;
   height: 22px;
 }
@@ -138,6 +139,7 @@
   object-fit: cover;
   cursor: pointer;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .image-26-icon {
   left: 464px;
@@ -175,6 +177,7 @@
   object-fit: cover;
   cursor: pointer;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .order-light-icon,
 .read-article {
@@ -203,6 +206,8 @@
   height: 231px;
   object-fit: cover;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
+  cursor: pointer;
 }
 .watch-video {
   position: absolute;

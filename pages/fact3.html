@@ -58,7 +58,7 @@
 The world has over 3.04 trillion trees in the world. However, 27,000 of them are cut down daily to make toilet paper. This translates to about 9.8 million trees annually. One single recycled edition of the New York Times newspaper could save 75,000 tree
         </p>
       </div>
-      <div class="logo-shape3">
+      <div class="logo-shape3" id="logoShapeContainer">
         <div class="logo-shape-child3"></div>
         <div class="logo-shape-child4"></div>
       </div>
@@ -111,6 +111,13 @@ The world has over 3.04 trillion trees in the world. However, 27,000 of them are
       var logoContainer = document.getElementById("logoContainer");
       if (logoContainer) {
         logoContainer.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

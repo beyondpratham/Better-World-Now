@@ -31,11 +31,81 @@
         alt=""
         src="../icons/rectangle-12941.svg"
       />
-      <div class="logo-shape8">
+      <div class="logo-shape8" id="logoShapeContainer">
         <div class="logo-shape-child13"></div>
         <div class="logo-shape-child14"></div>
       </div>
-      <img class="lb3-1-icon" alt="" src="../images/lb3-1@2x.png" />
+      <div class="lb3-1-icon">
+        <div class="lb-row lb-header-row">
+          <div class="lb-cell lb-col-rank">Rank</div>
+          <div class="lb-cell lb-col-name">Name</div>
+          <div class="lb-cell lb-col-id">ID</div>
+          <div class="lb-cell lb-col-points">Points</div>
+          <div class="lb-cell lb-col-badges">Badges</div>
+          <div class="lb-cell lb-col-success">Success Rate</div>
+          <div class="lb-cell lb-col-region">Region</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-cell lb-col-rank">#1</div>
+          <div class="lb-cell lb-col-name">
+            <span class="lb-avatar lb-avatar-1"><span class="lb-avatar-head"></span><span class="lb-avatar-body"></span></span>
+            Aadya
+          </div>
+          <div class="lb-cell lb-col-id">00285130971</div>
+          <div class="lb-cell lb-col-points">960,883</div>
+          <div class="lb-cell lb-col-badges">7,920</div>
+          <div class="lb-cell lb-col-success">92.04%</div>
+          <div class="lb-cell lb-col-region">LOREM</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-cell lb-col-rank">#2</div>
+          <div class="lb-cell lb-col-name">
+            <span class="lb-avatar lb-avatar-2"><span class="lb-avatar-head"></span><span class="lb-avatar-body"></span></span>
+            Yajat
+          </div>
+          <div class="lb-cell lb-col-id">88019463581</div>
+          <div class="lb-cell lb-col-points">902,037</div>
+          <div class="lb-cell lb-col-badges">8,918</div>
+          <div class="lb-cell lb-col-success">87.30%</div>
+          <div class="lb-cell lb-col-region">LOREM</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-cell lb-col-rank">#3</div>
+          <div class="lb-cell lb-col-name">
+            <span class="lb-avatar lb-avatar-3"><span class="lb-avatar-head"></span><span class="lb-avatar-body"></span></span>
+            Siddharth
+          </div>
+          <div class="lb-cell lb-col-id">67255137771</div>
+          <div class="lb-cell lb-col-points">871,006</div>
+          <div class="lb-cell lb-col-badges">7,840</div>
+          <div class="lb-cell lb-col-success">81.27%</div>
+          <div class="lb-cell lb-col-region">LOREM</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-cell lb-col-rank">#4</div>
+          <div class="lb-cell lb-col-name">
+            <span class="lb-avatar lb-avatar-4"><span class="lb-avatar-head"></span><span class="lb-avatar-body"></span></span>
+            Poorvi
+          </div>
+          <div class="lb-cell lb-col-id">00116130348</div>
+          <div class="lb-cell lb-col-points">620,553</div>
+          <div class="lb-cell lb-col-badges">2,003</div>
+          <div class="lb-cell lb-col-success">79.03%</div>
+          <div class="lb-cell lb-col-region">LOREM</div>
+        </div>
+        <div class="lb-row">
+          <div class="lb-cell lb-col-rank">#5</div>
+          <div class="lb-cell lb-col-name">
+            <span class="lb-avatar lb-avatar-5"><span class="lb-avatar-head"></span><span class="lb-avatar-body"></span></span>
+            Pratham
+          </div>
+          <div class="lb-cell lb-col-id">45185276601</div>
+          <div class="lb-cell lb-col-points">520,972</div>
+          <div class="lb-cell lb-col-badges">6,130</div>
+          <div class="lb-cell lb-col-success">71.88%</div>
+          <div class="lb-cell lb-col-region">LOREM</div>
+        </div>
+      </div>
       <div class="leader-board">Leader Board</div>
       <div class="tagline2">
         <b class="check-your-ranking">Check your ranking</b>
@@ -85,6 +155,13 @@
       var logoContainer = document.getElementById("logoContainer");
       if (logoContainer) {
         logoContainer.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

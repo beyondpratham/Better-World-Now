@@ -13,6 +13,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .login-child {
   top: 449px;
@@ -38,6 +39,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .login-with-google1 {
   position: absolute;
@@ -76,6 +78,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .login-child1 {
   position: absolute;
@@ -85,6 +88,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .create-account,
 .password1 {
@@ -102,6 +106,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 
 .usernamee-mail-id::placeholder, .password1::placeholder {

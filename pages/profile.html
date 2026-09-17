@@ -90,24 +90,47 @@
         </div>
         <img class="image-9-icon" alt="" src="../images/image-9@2x.png" />
       </div>
-      <img class="image-4-icon" alt="" src="../images/image-4@2x.png" /><button
+      <button
         class="profile-child"
         id="rectangleButton"
-      ></button
-      ><img class="image-6-icon" alt="" src="../images/image-6@2x.png" /><img
-        class="image-7-icon"
-        alt=""
-        src="../images/image-7@2x.png"
-      />
-      <a href="./coupon.html"><div class="profile-item"></div></a>
-      <div class="rewards" id="rewardsText">Rewards</div>
-      <a href="./set-goals.html"><div class="profile-inner"></div></a>
-      <div class="set-your-goals" id="setYourGoals">Set Your Goals</div>
-      <a href="./progress.html"><div class="profile-child1"></div></a>
-      <div class="track-progress" id="trackProgressText">Track Progress</div>
-      <a href="./contribute_more.html"><div class="profile-child2"></div></a>
-      
-      <div class="contribute-more"> <a href = "contribute_more.html"> Contribute More </a></div>
+      ></button>
+      <div class="profile-card">
+        <div class="profile-photo-col">
+          <img class="image-4-icon" alt="" src="../images/image-4@2x.png" />
+          <img class="image-7-icon" alt="" src="../images/image-7@2x.png" />
+        </div>
+        <div class="profile-details">
+          <div class="profile-heading">Profile</div>
+          <div class="profile-row">
+            <span class="profile-label">Username</span>
+            <span class="profile-value">zexfx34m3ivwz2unpggdaatcn</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Email</span>
+            <span class="profile-value">yajatgupta31708@gmail.com</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Date of birth</span>
+            <span class="profile-value">December 22, 2003</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Country or region</span>
+            <span class="profile-value">India</span>
+          </div>
+        </div>
+      </div>
+      <a href="./coupon.html" class="profile-item">
+        <span class="rewards" id="rewardsText">Rewards</span>
+      </a>
+      <a href="./set-goals.html" class="profile-inner">
+        <span class="set-your-goals" id="setYourGoals">Set Your Goals</span>
+      </a>
+      <a href="./progress.html" class="profile-child1">
+        <span class="track-progress" id="trackProgressText">Track Progress</span>
+      </a>
+      <a href="./contribute_more.html" class="profile-child2">
+        <span class="contribute-more">Contribute More</span>
+      </a>
 
       <img class="image-8-icon" alt="" src="../images/image-8@2x.png" />
       <div class="footer2" id="footerContainer">
@@ -144,7 +167,7 @@
         <div class="logo-shape-child33"></div>
         <div class="logo-shape-child34"></div>
       </div>
-      <div class="logo-shape20">
+      <div class="logo-shape20" id="logoShapeContainer">
         <div class="logo-shape-child33"></div>
         <div class="logo-shape-child34"></div>
       </div>
@@ -177,28 +200,7 @@
           }
         });
       }
-      
-      var rewardsText = document.getElementById("rewardsText");
-      if (rewardsText) {
-        rewardsText.addEventListener("click", function (e) {
-          window.location.href = "./coupon.html";
-        });
-      }
-      
-      var setYourGoals = document.getElementById("setYourGoals");
-      if (setYourGoals) {
-        setYourGoals.addEventListener("click", function (e) {
-          window.location.href = "./set-goals.html";
-        });
-      }
-      
-      var trackProgressText = document.getElementById("trackProgressText");
-      if (trackProgressText) {
-        trackProgressText.addEventListener("click", function (e) {
-          window.location.href = "./progress.html";
-        });
-      }
-      
+
       var footerContainer = document.getElementById("footerContainer");
       if (footerContainer) {
         footerContainer.addEventListener("click", function (e) {
@@ -223,6 +225,13 @@
       var logoContainer1 = document.getElementById("logoContainer1");
       if (logoContainer1) {
         logoContainer1.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

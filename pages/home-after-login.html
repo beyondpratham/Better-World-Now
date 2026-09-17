@@ -26,7 +26,7 @@
     <div class="home-after-login">
       <img class="hg-icon2" alt="" src="../images/hg@2x.png" />
       <div class="bg-hero3"></div>
-      <div class="logo-shape21">
+      <div class="logo-shape21" id="logoShapeContainer">
         <div class="logo-shape-child39"></div>
         <div class="logo-shape-child40"></div>
       </div>
@@ -194,11 +194,8 @@
       
       var aboutUsText = document.getElementById("aboutUsText");
       if (aboutUsText) {
-        aboutUsText.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='bGContent']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-          }
+        aboutUsText.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
         });
       }
       
@@ -219,6 +216,13 @@
       var logoContainer1 = document.getElementById("logoContainer1");
       if (logoContainer1) {
         logoContainer1.addEventListener("click", function (e) {
+          window.location.href = "./home-after-login.html";
+        });
+      }
+      
+      var logoShapeContainer = document.getElementById("logoShapeContainer");
+      if (logoShapeContainer) {
+        logoShapeContainer.addEventListener("click", function (e) {
           window.location.href = "./home-after-login.html";
         });
       }

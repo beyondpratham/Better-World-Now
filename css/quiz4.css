@@ -92,6 +92,9 @@
   height: 85px;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .provide-housing-to {
   position: absolute;
@@ -116,6 +119,9 @@
   height: 85px;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .vector-parent3 {
   top: 618px;

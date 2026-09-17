@@ -15,6 +15,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .signup-item {
   top: 166px;
@@ -37,6 +38,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .login-with-google,
 .signin-with-google {
@@ -113,6 +115,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .signup-child1 {
   position: absolute;
@@ -122,6 +125,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .e-mail-id {
   position: absolute;
@@ -135,6 +139,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .signup-child2 {
   position: absolute;
@@ -144,6 +149,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .password {
   position: absolute;
@@ -157,6 +163,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .signup-child3 {
   position: absolute;
@@ -166,6 +173,7 @@
   width: 520px;
   height: 77px;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .confirm-password {
   position: absolute;
@@ -179,6 +187,7 @@
   background-color: var(--color-aquamarine-200);
   border: none;
   border-radius: var(--br-xl);
+  box-shadow: var(--shadow-elevated);
 }
 .signup {
   position: relative;
