@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>(function(){try{if(localStorage.getItem('bwn-theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Sign in with Google - BetterWorldNow</title>
@@ -23,7 +24,8 @@
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
   </head>
-  <body class="bg-background text-white min-h-screen font-sans flex items-center justify-center">
+  <body class="bg-background text-white min-h-screen font-sans flex flex-col">
+    <div class="flex-1 flex items-center justify-center py-20">
     <div class="glass-card p-10 w-full max-w-sm text-center">
       <div class="bwn-logo mx-auto mb-6"></div>
       <h1 class="text-xl font-bold mb-2">Sign in with Google</h1>
@@ -33,6 +35,14 @@
         Continue with Google
       </button>
     </div>
+    </div>
+
+    <footer class="border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-6 py-10 text-center text-gray-400 text-sm">
+        Making a better world, one action at a time! &middot; <a href="./privacy-policy.html" class="hover:text-white transition-colors">Privacy</a> &middot; <a href="./terms.html" class="hover:text-white transition-colors">Terms</a> &middot; <a href="./help.html" class="hover:text-white transition-colors">Help</a>
+      <div class="flex items-center justify-center gap-3 mt-4"><a href="https://www.instagram.com/betterworldnow" target="_blank" class="w-9 h-9 rounded-full glass-card flex items-center justify-center hover:bg-surfaceHover transition-colors"><img class="w-4 h-4" alt="" src="../icons/instagram.svg" /></a><a href="https://twitter.com/betterworldnow" target="_blank" class="w-9 h-9 rounded-full glass-card flex items-center justify-center hover:bg-surfaceHover transition-colors"><img class="w-4 h-4" alt="" src="../icons/twitter.svg" /></a><label class="bwn-theme-switch" aria-label="Toggle light and dark theme"><input type="checkbox" data-theme-toggle /><span class="bwn-theme-switch-track"><span class="bwn-theme-switch-stars"><span style="top:6px;left:36px;"></span><span style="top:14px;left:46px;"></span><span style="top:20px;left:38px;"></span><span style="top:9px;left:52px;"></span></span><span class="bwn-theme-switch-knob"><svg class="bwn-theme-switch-craters" viewBox="0 0 26 26" fill="rgba(0,0,0,0.18)"><circle cx="8" cy="9" r="2.1"></circle><circle cx="16" cy="7" r="1.3"></circle><circle cx="12" cy="16" r="1.7"></circle></svg><svg class="bwn-theme-switch-rays" viewBox="0 0 38 38" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"><line x1="19" y1="1" x2="19" y2="5"></line><line x1="19" y1="33" x2="19" y2="37"></line><line x1="1" y1="19" x2="5" y2="19"></line><line x1="33" y1="19" x2="37" y2="19"></line><line x1="6" y1="6" x2="9" y2="9"></line><line x1="29" y1="29" x2="32" y2="32"></line><line x1="6" y1="32" x2="9" y2="29"></line><line x1="29" y1="9" x2="32" y2="6"></line></svg></span></span></label></div>
+      </div>
+    </footer>
 
     <script>
       var image11 = document.getElementById("image11");
@@ -42,6 +52,7 @@
         });
       }
     </script>
+    <script src="../js/liquid-glass.js"></script>
     <script type="module" src="../js/animations.js"></script>
   </body>
 </html>

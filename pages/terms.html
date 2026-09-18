@@ -4,7 +4,7 @@
     <script>(function(){try{if(localStorage.getItem('bwn-theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Jobs - BetterWorldNow</title>
+    <title>Terms of Service - BetterWorldNow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -23,16 +23,6 @@
       };
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
-    <style>
-      @keyframes search-roam {
-        0%   { transform: translate(-26px, -10px) rotate(-8deg); }
-        25%  { transform: translate(24px, 6px) rotate(6deg); }
-        50%  { transform: translate(-14px, 18px) rotate(-4deg); }
-        75%  { transform: translate(20px, -14px) rotate(8deg); }
-        100% { transform: translate(-26px, -10px) rotate(-8deg); }
-      }
-      .search-glass { animation: search-roam 5s ease-in-out infinite; }
-    </style>
   </head>
   <body class="bg-background text-white min-h-screen font-sans">
     <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
@@ -53,30 +43,40 @@
       </div>
     </nav>
 
-    <main class="pt-40 pb-32 max-w-xl mx-auto px-6 flex flex-col items-center text-center fade-in-up">
-      <a href="./home-after-login.html" class="self-start inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors mb-6">
+    <main class="pt-40 pb-32 max-w-2xl mx-auto px-6">
+      <a href="./home-after-login.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors mb-6">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
         Back to Home
       </a>
-      <div class="relative w-40 h-40 mb-8 flex items-center justify-center">
-        <div class="w-24 h-24 rounded-full bg-brandGreen/10"></div>
-        <svg class="search-glass absolute w-14 h-14 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="10" cy="10" r="6" stroke-width="2"></circle>
-          <line x1="20" y1="20" x2="14.5" y2="14.5" stroke-width="2" stroke-linecap="round"></line>
-        </svg>
+      <h1 class="text-3xl font-bold mb-2">Terms of Service</h1>
+      <p class="text-gray-500 text-sm mb-10">Last updated: January 2026</p>
+
+      <div class="glass-card p-8 md:p-10 flex flex-col gap-8 text-gray-300 leading-relaxed">
+        <section>
+          <h2 class="text-lg font-bold text-white mb-2">Using BetterWorldNow</h2>
+          <p>By creating an account, you agree to use BetterWorldNow honestly — the points, badges, and leaderboard rankings are meant to reflect real environmental actions, not gamed activity.</p>
+        </section>
+        <section>
+          <h2 class="text-lg font-bold text-white mb-2">Your Account</h2>
+          <p>You're responsible for keeping your login details secure and for the activity that happens under your account. Let us know right away if you think someone else has access to it.</p>
+        </section>
+        <section>
+          <h2 class="text-lg font-bold text-white mb-2">Points and Rewards</h2>
+          <p>Points, badges, and coupon rewards have no cash value and can be adjusted, expired, or revoked if we find they were earned through fraudulent or abusive activity.</p>
+        </section>
+        <section>
+          <h2 class="text-lg font-bold text-white mb-2">Content You Share</h2>
+          <p>Contributions, blog posts, and profile content you submit should be your own and accurate. You keep ownership of what you write; you're giving us permission to display it on the platform.</p>
+        </section>
+        <section>
+          <h2 class="text-lg font-bold text-white mb-2">Changes</h2>
+          <p>We may update these terms as the platform evolves. Continuing to use BetterWorldNow after a change means you accept the update.</p>
+        </section>
+        <section>
+          <h2 class="text-lg font-bold text-white mb-2">Contact Us</h2>
+          <p>Questions about these terms? Reach out through our <a href="./contact.html" class="text-brandGreen hover:text-emerald-400">Contact page</a>.</p>
+        </section>
       </div>
-      <h1 class="text-2xl md:text-3xl font-bold mb-3">No openings yet &mdash; keep looking!</h1>
-      <p class="text-gray-400 leading-relaxed mb-4">
-        We're a tiny team right now, so there's nothing open on the roster today. That changes fast though &mdash;
-        as BetterWorldNow grows past quizzes and rewards into a bigger community platform, we'll need people who
-        care about sustainability, design, and building things that actually get used.
-      </p>
-      <p class="text-gray-400 leading-relaxed">
-        Check back soon, or reach out to
-        <a href="./team.html" class="text-brandGreen font-semibold hover:text-emerald-400">the team</a>
-        directly if you'd like to help build BetterWorldNow &mdash; we're always happy to hear from people who
-        want to contribute before a role even exists.
-      </p>
     </main>
     <footer class="border-t border-white/5">
       <div class="max-w-7xl mx-auto px-6 py-16 flex flex-wrap justify-between gap-12">

@@ -12,6 +12,13 @@
         "parcel": "^2.7.0"
     },
     "dependencies": {
-        "gsap": "^3.15.0"
-    }
+        "gsap": "^3.15.0",
+        "quill": "^2.0.3"
+    },
+    "browserslist": [
+        "last 2 Chrome versions",
+        "last 2 Firefox versions",
+        "last 2 Safari versions",
+        "last 2 Edge versions"
+    ]
 }

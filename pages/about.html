@@ -4,7 +4,7 @@
     <script>(function(){try{if(localStorage.getItem('bwn-theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Jobs - BetterWorldNow</title>
+    <title>About Us - BetterWorldNow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -23,16 +23,6 @@
       };
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
-    <style>
-      @keyframes search-roam {
-        0%   { transform: translate(-26px, -10px) rotate(-8deg); }
-        25%  { transform: translate(24px, 6px) rotate(6deg); }
-        50%  { transform: translate(-14px, 18px) rotate(-4deg); }
-        75%  { transform: translate(20px, -14px) rotate(8deg); }
-        100% { transform: translate(-26px, -10px) rotate(-8deg); }
-      }
-      .search-glass { animation: search-roam 5s ease-in-out infinite; }
-    </style>
   </head>
   <body class="bg-background text-white min-h-screen font-sans">
     <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
@@ -53,31 +43,61 @@
       </div>
     </nav>
 
-    <main class="pt-40 pb-32 max-w-xl mx-auto px-6 flex flex-col items-center text-center fade-in-up">
-      <a href="./home-after-login.html" class="self-start inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors mb-6">
+    <main class="pt-32 pb-20 max-w-3xl mx-auto px-6">
+      <a href="./home-after-login.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors mb-6">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
         Back to Home
       </a>
-      <div class="relative w-40 h-40 mb-8 flex items-center justify-center">
-        <div class="w-24 h-24 rounded-full bg-brandGreen/10"></div>
-        <svg class="search-glass absolute w-14 h-14 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="10" cy="10" r="6" stroke-width="2"></circle>
-          <line x1="20" y1="20" x2="14.5" y2="14.5" stroke-width="2" stroke-linecap="round"></line>
-        </svg>
+      <div class="text-center mb-14 fade-in-up">
+        <div class="bwn-logo bwn-logo-lg mx-auto mb-6"></div>
+        <span class="text-brandGold text-sm tracking-widest uppercase">Our Story</span>
+        <h1 class="text-4xl font-bold mt-2">About BetterWorldNow</h1>
+        <p class="text-gray-300 mt-4 max-w-xl mx-auto">
+          The logo's "B" is built from two steps, not a straight line — because that's how this project actually grew.
+        </p>
       </div>
-      <h1 class="text-2xl md:text-3xl font-bold mb-3">No openings yet &mdash; keep looking!</h1>
-      <p class="text-gray-400 leading-relaxed mb-4">
-        We're a tiny team right now, so there's nothing open on the roster today. That changes fast though &mdash;
-        as BetterWorldNow grows past quizzes and rewards into a bigger community platform, we'll need people who
-        care about sustainability, design, and building things that actually get used.
-      </p>
-      <p class="text-gray-400 leading-relaxed">
-        Check back soon, or reach out to
-        <a href="./team.html" class="text-brandGreen font-semibold hover:text-emerald-400">the team</a>
-        directly if you'd like to help build BetterWorldNow &mdash; we're always happy to hear from people who
-        want to contribute before a role even exists.
-      </p>
+
+      <div class="flex flex-col gap-8">
+        <section class="glass-card p-8 md:p-10 fade-in-up">
+          <span class="text-brandGold text-sm tracking-widest uppercase">Step One</span>
+          <h2 class="text-2xl font-bold mt-2 mb-4">A small research project</h2>
+          <p class="text-gray-300 leading-relaxed">
+            BetterWorldNow began as a Design of Interactive Systems project at IIIT Delhi. A small team ran a
+            116-response survey and 11 field interviews around Nehru Place and on campus, trying to understand
+            one question: why don't more people act on environmental issues they say they care about? The answer
+            that kept coming back wasn't apathy — it was a lack of motivation and incentive, a hypothesis the team
+            confirmed with a chi-squared test on the data. That single insight became the whole idea: pair
+            learning with real, visible rewards instead of building another awareness-only site.
+          </p>
+        </section>
+
+        <section class="glass-card p-8 md:p-10 fade-in-up">
+          <span class="text-brandGold text-sm tracking-widest uppercase">Step Two</span>
+          <h2 class="text-2xl font-bold mt-2 mb-4">Taken further, for real impact</h2>
+          <p class="text-gray-300 leading-relaxed">
+            What started as a class project didn't stop there. Pratham and Shreya picked it up and kept building —
+            turning the original research into the actual product you're using: the points system, the
+            leaderboard, the quizzes and facts, the rewards. The goal shifted from "prove the idea works" to
+            "make it something people actually come back to," and that's the version that's live today.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a href="./team.html" class="glass-card px-5 py-2.5 text-sm font-medium hover:bg-surfaceHover transition-colors">Meet the team &rarr;</a>
+          </div>
+        </section>
+
+        <section class="glass-card p-8 md:p-10 fade-in-up">
+          <span class="text-brandGold text-sm tracking-widest uppercase">Why the Steps</span>
+          <h2 class="text-2xl font-bold mt-2 mb-4">Growth, one step at a time</h2>
+          <p class="text-gray-300 leading-relaxed">
+            The two stepped blocks in the logo aren't just a shape — they're the point. Nobody goes from doing
+            nothing to living zero-waste overnight, and no project goes from a class assignment to a real product
+            in one leap either. Both happen the same way: a small step, held onto, followed by another one. Green,
+            because that's the destination this is all in service of.
+          </p>
+        </section>
+      </div>
     </main>
+
     <footer class="border-t border-white/5">
       <div class="max-w-7xl mx-auto px-6 py-16 flex flex-wrap justify-between gap-12">
         <div>
@@ -122,7 +142,6 @@
         </div>
       </div>
     </footer>
-
     <script src="../js/liquid-glass.js"></script>
     <script type="module" src="../js/animations.js"></script>
   </body>

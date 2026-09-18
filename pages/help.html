@@ -4,7 +4,7 @@
     <script>(function(){try{if(localStorage.getItem('bwn-theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Jobs - BetterWorldNow</title>
+    <title>Help - BetterWorldNow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -17,21 +17,28 @@
               brandGreen: '#10B981',
               brandGold: '#FBBF24',
             },
-            fontFamily: { sans: ['Inter', 'sans-serif'] },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
           },
         },
       };
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
     <style>
-      @keyframes search-roam {
-        0%   { transform: translate(-26px, -10px) rotate(-8deg); }
-        25%  { transform: translate(24px, 6px) rotate(6deg); }
-        50%  { transform: translate(-14px, 18px) rotate(-4deg); }
-        75%  { transform: translate(20px, -14px) rotate(8deg); }
-        100% { transform: translate(-26px, -10px) rotate(-8deg); }
+      .help-item summary {
+        cursor: pointer;
+        list-style: none;
       }
-      .search-glass { animation: search-roam 5s ease-in-out infinite; }
+      .help-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .help-item .chevron {
+        transition: transform 0.2s ease;
+      }
+      .help-item[open] .chevron {
+        transform: rotate(180deg);
+      }
     </style>
   </head>
   <body class="bg-background text-white min-h-screen font-sans">
@@ -53,31 +60,79 @@
       </div>
     </nav>
 
-    <main class="pt-40 pb-32 max-w-xl mx-auto px-6 flex flex-col items-center text-center fade-in-up">
-      <a href="./home-after-login.html" class="self-start inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors mb-6">
+    <main class="pt-32 pb-20 max-w-3xl mx-auto px-6 grid gap-10">
+      <a href="./home-after-login.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors -mb-4">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
         Back to Home
       </a>
-      <div class="relative w-40 h-40 mb-8 flex items-center justify-center">
-        <div class="w-24 h-24 rounded-full bg-brandGreen/10"></div>
-        <svg class="search-glass absolute w-14 h-14 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="10" cy="10" r="6" stroke-width="2"></circle>
-          <line x1="20" y1="20" x2="14.5" y2="14.5" stroke-width="2" stroke-linecap="round"></line>
-        </svg>
+      <div class="fade-in-up">
+        <span class="text-brandGold text-sm tracking-widest uppercase">We're Here to Help</span>
+        <h1 class="text-4xl font-bold mt-2">Help Center</h1>
+        <p class="text-gray-300 mt-3">Answers to the most common questions about points, badges, and your account.</p>
       </div>
-      <h1 class="text-2xl md:text-3xl font-bold mb-3">No openings yet &mdash; keep looking!</h1>
-      <p class="text-gray-400 leading-relaxed mb-4">
-        We're a tiny team right now, so there's nothing open on the roster today. That changes fast though &mdash;
-        as BetterWorldNow grows past quizzes and rewards into a bigger community platform, we'll need people who
-        care about sustainability, design, and building things that actually get used.
-      </p>
-      <p class="text-gray-400 leading-relaxed">
-        Check back soon, or reach out to
-        <a href="./team.html" class="text-brandGreen font-semibold hover:text-emerald-400">the team</a>
-        directly if you'd like to help build BetterWorldNow &mdash; we're always happy to hear from people who
-        want to contribute before a role even exists.
-      </p>
+
+      <section class="glass-card p-2 fade-in-up">
+        <details class="help-item border-b border-white/5 p-6" open>
+          <summary class="flex items-center justify-between gap-4 font-semibold">
+            How do I earn points and climb the leaderboard?
+            <svg class="chevron w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+            Every quiz, fact, video, and article on the Resources page earns you points. Logging a real-world
+            contribution from your Profile page also adds points and can level up your Changemaker rank.
+          </p>
+        </details>
+        <details class="help-item border-b border-white/5 p-6">
+          <summary class="flex items-center justify-between gap-4 font-semibold">
+            How do I change my username, email, or profile picture?
+            <svg class="chevron w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+            Open the profile menu in the top-right corner and choose <strong>Settings</strong>. The Account
+            section lets you update your username, email, date of birth, country, and profile picture URL.
+          </p>
+        </details>
+        <details class="help-item border-b border-white/5 p-6">
+          <summary class="flex items-center justify-between gap-4 font-semibold">
+            What does two-factor authentication do?
+            <svg class="chevron w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+            It adds a second verification step beyond your password, so your account stays protected even if
+            your password is ever compromised. Turn it on from Settings &rarr; Security.
+          </p>
+        </details>
+        <details class="help-item border-b border-white/5 p-6">
+          <summary class="flex items-center justify-between gap-4 font-semibold">
+            Can I switch between dark and light theme?
+            <svg class="chevron w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+            Yes. Go to Settings &rarr; Appearance and toggle Light theme. The choice is saved on this device and
+            applies across every page of BetterWorldNow.
+          </p>
+        </details>
+        <details class="help-item p-6">
+          <summary class="flex items-center justify-between gap-4 font-semibold">
+            How do regions and time filters work on the leaderboard?
+            <svg class="chevron w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </summary>
+          <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+            Use the All Time / This Month / This Week tabs to change the ranking window, and the region dropdown
+            to see how you stack up against changemakers in your part of the world.
+          </p>
+        </details>
+      </section>
+
+      <section class="glass-card p-8 flex flex-col sm:flex-row items-center justify-between gap-4 fade-in-up">
+        <div>
+          <h2 class="text-xl font-bold mb-1">Still need help?</h2>
+          <p class="text-gray-400 text-sm">Our team usually replies within a day.</p>
+        </div>
+        <a href="./contact.html" class="bwn-glass-accent bg-brandGreen text-background font-semibold px-6 py-2.5 rounded-full hover:bg-emerald-400 transition-colors whitespace-nowrap">Contact Support</a>
+      </section>
     </main>
+
     <footer class="border-t border-white/5">
       <div class="max-w-7xl mx-auto px-6 py-16 flex flex-wrap justify-between gap-12">
         <div>
@@ -122,7 +177,6 @@
         </div>
       </div>
     </footer>
-
     <script src="../js/liquid-glass.js"></script>
     <script type="module" src="../js/animations.js"></script>
   </body>

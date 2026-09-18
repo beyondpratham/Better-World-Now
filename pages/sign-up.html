@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>(function(){try{if(localStorage.getItem('bwn-theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>Sign Up - BetterWorldNow</title>
@@ -23,21 +24,26 @@
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
   </head>
-  <body class="bg-background text-white min-h-screen font-sans flex items-center justify-center">
+  <body class="bg-background text-white min-h-screen font-sans flex flex-col">
     <a href="./index.html" id="betterWorldNowText" class="fixed top-8 left-8 flex items-center gap-2">
       <div class="bwn-logo"></div>
       <span class="text-xl font-bold tracking-tight">BetterWorldNow</span>
     </a>
 
+    <div class="flex-1 flex items-center justify-center py-20">
     <div class="glass-card p-10 w-full max-w-sm">
       <h1 class="text-2xl font-bold mb-8 text-center">Sign Up</h1>
-      <form class="flex flex-col gap-4">
+      <form id="signupForm" class="flex flex-col gap-4">
         <input type="text" name="username" placeholder="Enter Your Name" class="bwn-input" id="username" required />
-        <input type="text" name="email" placeholder="Enter Your Email ID" class="bwn-input" id="email" required />
-        <input type="password" name="password" placeholder="Enter Your Password" class="bwn-input" id="password" required />
+        <input type="email" name="email" placeholder="Enter Your Email ID" class="bwn-input" id="email" required />
+        <input type="password" name="password" placeholder="Enter Your Password" class="bwn-input" id="password" minlength="6" required />
         <input type="password" name="cpassword" placeholder="Confirm Your Password" class="bwn-input" id="cpassword" required />
       </form>
-      <button type="button" id="rectangle" class="w-full bg-brandGreen text-background font-semibold py-3 rounded-full hover:bg-emerald-400 transition-colors mt-6">
+      <p id="signupError" class="hidden text-red-400 text-sm mt-2">Passwords don't match.</p>
+      <p class="text-gray-500 text-xs mt-4 leading-relaxed">
+        By signing up, you agree to our <a href="./terms.html" class="text-brandGreen hover:text-emerald-400">Terms of Service</a> and <a href="./privacy-policy.html" class="text-brandGreen hover:text-emerald-400">Privacy Policy</a>.
+      </p>
+      <button type="button" id="rectangle" class="w-full bwn-glass-accent bg-brandGreen text-background font-semibold py-3 rounded-full hover:bg-emerald-400 transition-colors mt-6">
         Sign Up
       </button>
       <button type="button" id="sIGNINWITHGOOGLE" class="w-full glass-card py-3 font-medium hover:bg-surfaceHover transition-colors mt-3">
@@ -48,11 +54,30 @@
         <a href="./login.html" class="text-brandGreen font-semibold hover:text-emerald-400">Login</a>
       </p>
     </div>
+    </div>
+
+    <footer class="border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-6 py-10 text-center text-gray-400 text-sm">
+        Making a better world, one action at a time! &middot; <a href="./privacy-policy.html" class="hover:text-white transition-colors">Privacy</a> &middot; <a href="./terms.html" class="hover:text-white transition-colors">Terms</a> &middot; <a href="./help.html" class="hover:text-white transition-colors">Help</a>
+      <div class="flex items-center justify-center gap-3 mt-4"><a href="https://www.instagram.com/betterworldnow" target="_blank" class="w-9 h-9 rounded-full glass-card flex items-center justify-center hover:bg-surfaceHover transition-colors"><img class="w-4 h-4" alt="" src="../icons/instagram.svg" /></a><a href="https://twitter.com/betterworldnow" target="_blank" class="w-9 h-9 rounded-full glass-card flex items-center justify-center hover:bg-surfaceHover transition-colors"><img class="w-4 h-4" alt="" src="../icons/twitter.svg" /></a><label class="bwn-theme-switch" aria-label="Toggle light and dark theme"><input type="checkbox" data-theme-toggle /><span class="bwn-theme-switch-track"><span class="bwn-theme-switch-stars"><span style="top:6px;left:36px;"></span><span style="top:14px;left:46px;"></span><span style="top:20px;left:38px;"></span><span style="top:9px;left:52px;"></span></span><span class="bwn-theme-switch-knob"><svg class="bwn-theme-switch-craters" viewBox="0 0 26 26" fill="rgba(0,0,0,0.18)"><circle cx="8" cy="9" r="2.1"></circle><circle cx="16" cy="7" r="1.3"></circle><circle cx="12" cy="16" r="1.7"></circle></svg><svg class="bwn-theme-switch-rays" viewBox="0 0 38 38" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"><line x1="19" y1="1" x2="19" y2="5"></line><line x1="19" y1="33" x2="19" y2="37"></line><line x1="1" y1="19" x2="5" y2="19"></line><line x1="33" y1="19" x2="37" y2="19"></line><line x1="6" y1="6" x2="9" y2="9"></line><line x1="29" y1="29" x2="32" y2="32"></line><line x1="6" y1="32" x2="9" y2="29"></line><line x1="29" y1="9" x2="32" y2="6"></line></svg></span></span></label></div>
+      </div>
+    </footer>
 
     <script>
       var rectangle = document.getElementById("rectangle");
       if (rectangle) {
         rectangle.addEventListener("click", function () {
+          var form = document.getElementById("signupForm");
+          var errorEl = document.getElementById("signupError");
+          if (!form.reportValidity()) return;
+          var password = document.getElementById("password").value;
+          var cpassword = document.getElementById("cpassword").value;
+          if (password !== cpassword) {
+            errorEl.classList.remove("hidden");
+            document.getElementById("cpassword").focus();
+            return;
+          }
+          errorEl.classList.add("hidden");
           window.location.href = "./welcome.html";
         });
       }
@@ -63,6 +88,7 @@
         });
       }
     </script>
+    <script src="../js/liquid-glass.js"></script>
     <script type="module" src="../js/animations.js"></script>
   </body>
 </html>

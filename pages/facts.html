@@ -4,7 +4,7 @@
     <script>(function(){try{if(localStorage.getItem('bwn-theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Jobs - BetterWorldNow</title>
+    <title>Learn Facts - BetterWorldNow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -23,16 +23,6 @@
       };
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
-    <style>
-      @keyframes search-roam {
-        0%   { transform: translate(-26px, -10px) rotate(-8deg); }
-        25%  { transform: translate(24px, 6px) rotate(6deg); }
-        50%  { transform: translate(-14px, 18px) rotate(-4deg); }
-        75%  { transform: translate(20px, -14px) rotate(8deg); }
-        100% { transform: translate(-26px, -10px) rotate(-8deg); }
-      }
-      .search-glass { animation: search-roam 5s ease-in-out infinite; }
-    </style>
   </head>
   <body class="bg-background text-white min-h-screen font-sans">
     <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
@@ -43,7 +33,7 @@
         </a>
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
           <a href="./home-after-login.html" class="glass-card bwn-nav-link hover:text-white transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Home</a>
-          <a href="./desktop-12.html" class="glass-card bwn-nav-link hover:text-white transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.42A12.083 12.083 0 0112 21c-2.5 0-4.847-.639-6.16-1.822A12.083 12.083 0 015.84 10.58L12 14z"></path></svg>Learning</a>
+          <a href="./desktop-12.html" class="glass-card bwn-nav-link text-brandGreen"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.42A12.083 12.083 0 0112 21c-2.5 0-4.847-.639-6.16-1.822A12.083 12.083 0 015.84 10.58L12 14z"></path></svg>Learning</a>
           <a href="./leaderboard.html" class="glass-card bwn-nav-link hover:text-white transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20h6M12 16v4M7 4h10v3a5 5 0 01-10 0V4zM7 5H4a1 1 0 00-1 1v1a3 3 0 003 3h1M17 5h3a1 1 0 011 1v1a3 3 0 01-3 3h-1"></path></svg>LeaderBoard</a>
           <a href="./blog.html" class="glass-card bwn-nav-link hover:text-white transition-colors"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-5m-1.5-9.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>Blog</a>
         </div>
@@ -53,31 +43,34 @@
       </div>
     </nav>
 
-    <main class="pt-40 pb-32 max-w-xl mx-auto px-6 flex flex-col items-center text-center fade-in-up">
-      <a href="./home-after-login.html" class="self-start inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors mb-6">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-        Back to Home
-      </a>
-      <div class="relative w-40 h-40 mb-8 flex items-center justify-center">
-        <div class="w-24 h-24 rounded-full bg-brandGreen/10"></div>
-        <svg class="search-glass absolute w-14 h-14 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="10" cy="10" r="6" stroke-width="2"></circle>
-          <line x1="20" y1="20" x2="14.5" y2="14.5" stroke-width="2" stroke-linecap="round"></line>
-        </svg>
+    <main class="pt-32 pb-32 max-w-2xl mx-auto px-6 w-full">
+      <div class="flex items-center justify-between mb-8">
+        <a href="./desktop-12.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          Exit
+        </a>
+        <span id="factCounter" class="text-gray-400 text-sm font-medium"></span>
       </div>
-      <h1 class="text-2xl md:text-3xl font-bold mb-3">No openings yet &mdash; keep looking!</h1>
-      <p class="text-gray-400 leading-relaxed mb-4">
-        We're a tiny team right now, so there's nothing open on the roster today. That changes fast though &mdash;
-        as BetterWorldNow grows past quizzes and rewards into a bigger community platform, we'll need people who
-        care about sustainability, design, and building things that actually get used.
-      </p>
-      <p class="text-gray-400 leading-relaxed">
-        Check back soon, or reach out to
-        <a href="./team.html" class="text-brandGreen font-semibold hover:text-emerald-400">the team</a>
-        directly if you'd like to help build BetterWorldNow &mdash; we're always happy to hear from people who
-        want to contribute before a role even exists.
-      </p>
+
+      <div class="glass-card p-8 md:p-10 text-center">
+        <div id="factIconWrap" class="w-14 h-14 rounded-full bg-brandGreen/10 flex items-center justify-center mx-auto mb-6"></div>
+        <span id="factCategory" class="text-brandGold text-xs font-semibold uppercase tracking-widest"></span>
+        <h1 id="factTitle" class="text-2xl md:text-3xl font-bold mt-3 mb-4"></h1>
+        <p id="factText" class="text-gray-400 leading-relaxed"></p>
+      </div>
+
+      <div class="flex justify-between mt-8">
+        <button type="button" id="factBackBtn" class="glass-card px-8 py-3 font-medium hover:bg-surfaceHover transition-colors">
+          <svg class="w-4 h-4 inline-block -mt-0.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          Back
+        </button>
+        <button type="button" id="factNextBtn" class="bwn-glass-accent bg-brandGreen text-background font-semibold px-8 py-3 rounded-full hover:bg-emerald-400 transition-colors">
+          Next
+          <svg class="w-4 h-4 inline-block -mt-0.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </button>
+      </div>
     </main>
+
     <footer class="border-t border-white/5">
       <div class="max-w-7xl mx-auto px-6 py-16 flex flex-wrap justify-between gap-12">
         <div>
@@ -125,5 +118,74 @@
 
     <script src="../js/liquid-glass.js"></script>
     <script type="module" src="../js/animations.js"></script>
+    <script src="../js/facts-data.js"></script>
+    <script>
+      var ICONS = {
+        climate:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9a3 3 0 00-3 3v4.354a4 4 0 106 0V12a3 3 0 00-3-3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v9"></path>',
+        ocean:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8c2.5-2 5-2 7.5 0s5 2 7.5 0 5-2 5-2"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 14c2.5-2 5-2 7.5 0s5 2 7.5 0 5-2 5-2"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 20c2.5-2 5-2 7.5 0s5 2 7.5 0 5-2 5-2"></path>',
+        forest:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L6 11h3l-5 8h16l-5-8h3L12 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19v3"></path>',
+        wildlife:
+          '<circle cx="12" cy="15" r="3.2" stroke-width="2"></circle><circle cx="6.5" cy="9" r="1.5" stroke-width="2"></circle><circle cx="10.5" cy="6" r="1.5" stroke-width="2"></circle><circle cx="13.5" cy="6" r="1.5" stroke-width="2"></circle><circle cx="17.5" cy="9" r="1.5" stroke-width="2"></circle>',
+        energy:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"></path>',
+        waste:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 7h12M9 7V4h6v3m-7 0l.8 12.2a2 2 0 002 1.8h4.4a2 2 0 002-1.8L17 7"></path>',
+        water:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3s6 6.5 6 11a6 6 0 11-12 0c0-4.5 6-11 6-11z"></path>',
+        air:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h10.5a2.25 2.25 0 10-2.25-2.25"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16h12.5a2.25 2.25 0 112.25 2.25"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h7.5"></path>',
+        food:
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8C8 10 6 16 4 21c2-1 4-1 6 0 6-1 9-5 9-11 0-2-1-2-2-2z"></path>',
+      };
+
+      function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = a[i];
+          a[i] = a[j];
+          a[j] = tmp;
+        }
+        return a;
+      }
+
+      var order = shuffle(FACTS.map(function (_, i) { return i; }));
+      var pos = 0;
+
+      var iconWrap = document.getElementById('factIconWrap');
+      var categoryEl = document.getElementById('factCategory');
+      var titleEl = document.getElementById('factTitle');
+      var textEl = document.getElementById('factText');
+      var counterEl = document.getElementById('factCounter');
+      var backBtn = document.getElementById('factBackBtn');
+      var nextBtn = document.getElementById('factNextBtn');
+
+      function render() {
+        var fact = FACTS[order[pos]];
+        iconWrap.innerHTML = '<svg class="w-7 h-7 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">' + (ICONS[fact.category] || ICONS.climate) + '</svg>';
+        categoryEl.textContent = fact.category;
+        titleEl.textContent = fact.title;
+        textEl.textContent = fact.text;
+        counterEl.textContent = (pos + 1) + ' / ' + order.length;
+        backBtn.disabled = pos === 0;
+        backBtn.classList.toggle('opacity-40', pos === 0);
+        backBtn.classList.toggle('cursor-not-allowed', pos === 0);
+      }
+
+      nextBtn.addEventListener('click', function () {
+        pos = (pos + 1) % order.length;
+        render();
+      });
+      backBtn.addEventListener('click', function () {
+        if (pos === 0) return;
+        pos--;
+        render();
+      });
+
+      render();
+    </script>
   </body>
 </html>

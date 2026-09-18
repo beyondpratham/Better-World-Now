@@ -4,7 +4,7 @@
     <script>(function(){try{if(localStorage.getItem('bwn-theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title>Jobs - BetterWorldNow</title>
+    <title>Settings - BetterWorldNow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -17,22 +17,14 @@
               brandGreen: '#10B981',
               brandGold: '#FBBF24',
             },
-            fontFamily: { sans: ['Inter', 'sans-serif'] },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
           },
         },
       };
     </script>
     <link rel="stylesheet" href="../css/theme.css" />
-    <style>
-      @keyframes search-roam {
-        0%   { transform: translate(-26px, -10px) rotate(-8deg); }
-        25%  { transform: translate(24px, 6px) rotate(6deg); }
-        50%  { transform: translate(-14px, 18px) rotate(-4deg); }
-        75%  { transform: translate(20px, -14px) rotate(8deg); }
-        100% { transform: translate(-26px, -10px) rotate(-8deg); }
-      }
-      .search-glass { animation: search-roam 5s ease-in-out infinite; }
-    </style>
   </head>
   <body class="bg-background text-white min-h-screen font-sans">
     <nav class="fixed w-full top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-md">
@@ -53,31 +45,115 @@
       </div>
     </nav>
 
-    <main class="pt-40 pb-32 max-w-xl mx-auto px-6 flex flex-col items-center text-center fade-in-up">
-      <a href="./home-after-login.html" class="self-start inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors mb-6">
+    <main class="pt-32 pb-20 max-w-3xl mx-auto px-6 grid gap-10">
+      <a href="./profile.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors -mb-4">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-        Back to Home
+        Back to Profile
       </a>
-      <div class="relative w-40 h-40 mb-8 flex items-center justify-center">
-        <div class="w-24 h-24 rounded-full bg-brandGreen/10"></div>
-        <svg class="search-glass absolute w-14 h-14 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <circle cx="10" cy="10" r="6" stroke-width="2"></circle>
-          <line x1="20" y1="20" x2="14.5" y2="14.5" stroke-width="2" stroke-linecap="round"></line>
-        </svg>
+      <div class="fade-in-up">
+        <span class="text-brandGold text-sm tracking-widest uppercase">Manage Your Account</span>
+        <h1 class="text-4xl font-bold mt-2">Settings</h1>
       </div>
-      <h1 class="text-2xl md:text-3xl font-bold mb-3">No openings yet &mdash; keep looking!</h1>
-      <p class="text-gray-400 leading-relaxed mb-4">
-        We're a tiny team right now, so there's nothing open on the roster today. That changes fast though &mdash;
-        as BetterWorldNow grows past quizzes and rewards into a bigger community platform, we'll need people who
-        care about sustainability, design, and building things that actually get used.
-      </p>
-      <p class="text-gray-400 leading-relaxed">
-        Check back soon, or reach out to
-        <a href="./team.html" class="text-brandGreen font-semibold hover:text-emerald-400">the team</a>
-        directly if you'd like to help build BetterWorldNow &mdash; we're always happy to hear from people who
-        want to contribute before a role even exists.
-      </p>
+
+      <form class="glass-card p-8 fade-in-up" data-profile-scope>
+        <h2 class="text-xl font-bold mb-1">Account</h2>
+        <p class="text-gray-400 text-sm mb-6">Update your public profile details.</p>
+
+        <div class="flex items-center gap-5 mb-6">
+          <div class="w-20 h-20 rounded-full overflow-hidden border-4 border-white/5 shrink-0">
+            <img src="https://github.com/beyondpratham.png" alt="" class="w-full h-full object-cover" data-profile-field="avatar" id="avatarPreview" />
+          </div>
+          <div class="flex-1">
+            <label class="block text-gray-400 text-sm mb-1.5">Profile picture</label>
+            <button type="button" id="avatarUploadBtn" class="glass-card px-4 py-2 text-sm font-medium hover:bg-surfaceHover transition-colors">Upload &amp; Change</button>
+            <input type="file" id="avatarFileInput" accept="image/*" class="hidden" />
+            <input type="hidden" id="avatarInput" data-profile-field="avatar" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-1">
+          <div>
+            <label class="block text-gray-400 text-sm mb-1.5" for="usernameInput">Username</label>
+            <input id="usernameInput" type="text" class="bwn-input" data-profile-field="username" required />
+          </div>
+          <div>
+            <label class="block text-gray-400 text-sm mb-1.5" for="emailInput">Email</label>
+            <input id="emailInput" type="email" class="bwn-input" data-profile-field="email" required />
+          </div>
+          <div>
+            <label class="block text-gray-400 text-sm mb-1.5" for="dobInput">Date of birth</label>
+            <input id="dobInput" type="text" class="bwn-input" data-profile-field="dob" required />
+          </div>
+          <div>
+            <label class="block text-gray-400 text-sm mb-1.5" for="countryInput">Country or region</label>
+            <input id="countryInput" type="text" class="bwn-input" data-profile-field="country" required />
+          </div>
+        </div>
+
+        <div class="flex justify-end mt-6">
+          <button type="button" id="accountSaveBtn" class="bwn-glass-accent bg-brandGreen text-background font-semibold px-6 py-2.5 rounded-full hover:bg-emerald-400 transition-colors" data-profile-save data-saved-label="Saved!">Save Changes</button>
+        </div>
+      </form>
+
+      <section class="glass-card p-8 fade-in-up">
+        <h2 class="text-xl font-bold mb-1">Security</h2>
+        <p class="text-gray-400 text-sm mb-2">Add an extra layer of protection to your account.</p>
+        <div class="bwn-settings-row">
+          <div>
+            <div class="font-medium">Two-factor authentication</div>
+            <div class="text-gray-400 text-sm">Require a verification code in addition to your password.</div>
+          </div>
+          <label class="bwn-toggle">
+            <input type="checkbox" data-profile-toggle="twoFactor" />
+            <span class="bwn-toggle-track"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="glass-card p-8 fade-in-up">
+        <h2 class="text-xl font-bold mb-1">Notifications</h2>
+        <p class="text-gray-400 text-sm mb-2">Choose what BetterWorldNow can email you about.</p>
+        <div class="bwn-settings-row">
+          <div>
+            <div class="font-medium">Email notifications</div>
+            <div class="text-gray-400 text-sm">Updates on your contributions, badges, and rank changes.</div>
+          </div>
+          <label class="bwn-toggle">
+            <input type="checkbox" data-profile-toggle="notifyEmail" />
+            <span class="bwn-toggle-track"></span>
+          </label>
+        </div>
+        <div class="bwn-settings-row">
+          <div>
+            <div class="font-medium">Weekly digest</div>
+            <div class="text-gray-400 text-sm">A weekly summary of leaderboard movement and new resources.</div>
+          </div>
+          <label class="bwn-toggle">
+            <input type="checkbox" data-profile-toggle="notifyDigest" />
+            <span class="bwn-toggle-track"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="glass-card p-8 fade-in-up">
+        <h2 class="text-xl font-bold mb-1">Appearance</h2>
+        <p class="text-gray-400 text-sm mb-2">Switch between dark and light theme, site-wide.</p>
+        <div class="bwn-settings-row">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.36 6.36l-.7-.7M6.34 6.34l-.7-.7m12.02 0l-.7.7M6.34 17.66l-.7.7M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+            <div>
+              <div class="font-medium">Light theme</div>
+              <div class="text-gray-400 text-sm">Applies immediately across every page.</div>
+            </div>
+          </div>
+          <label class="bwn-toggle">
+            <input type="checkbox" data-theme-toggle />
+            <span class="bwn-toggle-track"></span>
+          </label>
+        </div>
+      </section>
     </main>
+
     <footer class="border-t border-white/5">
       <div class="max-w-7xl mx-auto px-6 py-16 flex flex-wrap justify-between gap-12">
         <div>
@@ -122,8 +198,36 @@
         </div>
       </div>
     </footer>
-
     <script src="../js/liquid-glass.js"></script>
     <script type="module" src="../js/animations.js"></script>
+    <script>
+      document.getElementById('avatarUploadBtn').addEventListener('click', function () {
+        document.getElementById('avatarFileInput').click();
+      });
+      document.getElementById('avatarFileInput').addEventListener('change', function (e) {
+        var file = e.target.files && e.target.files[0];
+        if (!file) return;
+        var reader = new FileReader();
+        reader.onload = function (ev) {
+          var img = new Image();
+          img.onload = function () {
+            var size = 200;
+            var canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            var ctx = canvas.getContext('2d');
+            var scale = Math.max(size / img.width, size / img.height);
+            var w = img.width * scale;
+            var h = img.height * scale;
+            ctx.drawImage(img, (size - w) / 2, (size - h) / 2, w, h);
+            var dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+            document.getElementById('avatarPreview').src = dataUrl;
+            document.getElementById('avatarInput').value = dataUrl;
+          };
+          img.src = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    </script>
   </body>
 </html>

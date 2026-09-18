@@ -1,5 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+:root {
+  --c-bg: #0d1310;
+  --c-nav-bg: rgba(13, 19, 16, 0.55);
+  --c-surface: rgba(255, 255, 255, 0.03);
+  --c-surface-hover: rgba(255, 255, 255, 0.08);
+  --c-text: #ffffff;
+  --c-text-2: #d1d5db;
+  --c-text-3: #9ca3af;
+  --c-text-4: #6b7280;
+  --c-border-1: rgba(255, 255, 255, 0.05);
+  --c-border-2: rgba(255, 255, 255, 0.1);
+  --c-overlay-10: rgba(255, 255, 255, 0.1);
+  --c-input-bg: rgba(255, 255, 255, 0.05);
+  --c-select-bg: #16211d;
+
+  /* Liquid-glass surface: translucent tinted fill + blur, with a
+     specular sheen and inset highlight/shadow standing in for the
+     way light catches the top edge and thickness of real glass. */
+  --glass-blur: 26px;
+  --glass-sat: 180%;
+  --c-glass-bg: rgba(30, 42, 36, 0.42);
+  --c-glass-border: rgba(255, 255, 255, 0.14);
+  --c-glass-shine: rgba(255, 255, 255, 0.16);
+  --c-glass-inset-hi: rgba(255, 255, 255, 0.22);
+  --c-glass-inset-lo: rgba(255, 255, 255, 0.03);
+  --c-glass-shadow: rgba(0, 0, 0, 0.4);
+
+  /* Brand green/gold as bare text (eyebrow labels, links, active nav)
+     stay at full brightness on dark backgrounds. */
+  --c-accent-green: #10B981;
+  --c-accent-gold: #FBBF24;
+}
+
+:root[data-theme='light'] {
+  --c-bg: #e8f1ec;
+  --c-nav-bg: rgba(232, 241, 236, 0.6);
+  --c-surface: rgba(13, 30, 22, 0.05);
+  --c-surface-hover: rgba(13, 30, 22, 0.09);
+  --c-text: #0b1a13;
+  --c-text-2: #2c3a33;
+  --c-text-3: #44544c;
+  --c-text-4: #526056;
+  --c-border-1: rgba(13, 30, 22, 0.09);
+  --c-border-2: rgba(13, 30, 22, 0.14);
+  --c-overlay-10: rgba(13, 30, 22, 0.12);
+  --c-input-bg: rgba(255, 255, 255, 0.55);
+  --c-select-bg: #fdfefd;
+
+  --glass-blur: 26px;
+  --glass-sat: 140%;
+  --c-glass-bg: rgba(255, 255, 255, 0.55);
+  --c-glass-border: rgba(255, 255, 255, 0.8);
+  --c-glass-shine: rgba(255, 255, 255, 0.75);
+  --c-glass-inset-hi: rgba(255, 255, 255, 0.85);
+  --c-glass-inset-lo: rgba(13, 30, 22, 0.05);
+  --c-glass-shadow: rgba(15, 35, 26, 0.16);
+
+  /* Bare text needs darker, more saturated brand colors on a light
+     background — the dark-theme brights (#10B981 / #FBBF24) don't
+     clear AA contrast here. Solid-fill buttons (bg-brandGreen with
+     dark text) are unaffected and keep the bright brand colors. */
+  --c-accent-green: #0a7a56;
+  --c-accent-gold: #92620a;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,28 +73,194 @@ html {
   color-scheme: dark;
 }
 
+html[data-theme='light'] {
+  color-scheme: light;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #0d1310;
+  background-color: var(--c-bg);
   font-family: 'Inter', sans-serif;
-  color: #fff;
+  color: var(--c-text);
 }
 
 a {
   color: inherit;
 }
 
+/* Liquid-glass surface: heavy blur + saturation so whatever sits
+   behind bleeds color through, a bright inset edge along the top to
+   read as a lit rim, a soft inset shadow along the bottom for
+   thickness, and a diagonal ::before sheen for the specular glint.
+   The sheen carries a negative z-index so it never sits over the
+   card's real (static, non-positioned) content. */
 .glass-card {
-  background: rgba(25, 35, 30, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1rem;
+  position: relative;
+  isolation: isolate;
+  background: var(--c-glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat)) var(--lg-filter, none);
+  border: 1px solid var(--c-glass-border);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 12px 36px var(--c-glass-shadow),
+    inset 0 1px 0 var(--c-glass-inset-hi),
+    inset 0 -1px 0 var(--c-glass-inset-lo);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+/* Only surfaces that are actually clickable get the tactile lift —
+   a static stat card or table wrapper shouldn't feel interactive. */
+a.glass-card:hover,
+button.glass-card:hover {
+  transform: translateY(-2px) scale(1.012);
+  filter: brightness(1.05);
+  box-shadow:
+    0 20px 48px var(--c-glass-shadow),
+    inset 0 1px 0 var(--c-glass-inset-hi),
+    inset 0 -1px 0 var(--c-glass-inset-lo);
+}
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--c-glass-shine) 0%, transparent 55%);
 }
 
 .nav-link.active {
-  color: #10B981;
+  color: var(--c-accent-green);
+}
+
+/* The top nav is a full-width liquid-glass bar: stronger blur than
+   Tailwind's own backdrop-blur-md utility, plus a lit top-of-glass
+   line along its lower edge. !important guards against the Tailwind
+   CDN script's injected <style> landing after this one in <head>. */
+nav {
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat)) var(--lg-filter, none) !important;
+  box-shadow: 0 1px 30px var(--c-glass-shadow);
+}
+
+/* Each nav item (About us, Resources, LeaderBoard, Blog, My Profile) is
+   its own small liquid-glass pill, not just colored text. Pairs with
+   .glass-card for the actual glass look; this only overrides sizing/
+   shape (glass-card's own border-radius is meant for bigger content
+   cards, not a pill) and lays out the icon+label inside it. */
+.bwn-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px !important;
+}
+
+/* Solid brand-green CTAs (bg-brandGreen) get the glass *treatment* —
+   specular sheen, an inset top highlight, a soft outer glow, a hover
+   lift — without becoming translucent. The fill is fully opaque, so
+   backdrop-filter would have nothing to show through; skipping it
+   here (and leaving these out of js/liquid-glass.js's selector) is
+   deliberate, not an oversight. */
+.bwn-glass-accent {
+  position: relative;
+  isolation: isolate;
+  box-shadow:
+    0 10px 28px rgba(16, 185, 129, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+.bwn-glass-accent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 55%);
+}
+.bwn-glass-accent:hover {
+  transform: translateY(-2px) scale(1.015);
+  filter: brightness(1.05);
+  box-shadow:
+    0 14px 34px rgba(16, 185, 129, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* A glass search pill that starts as just an icon and widens into a
+   real input on hover/focus — stays widened once there's text in it,
+   so it doesn't collapse out from under what you're typing. */
+.bwn-search-expand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0 0.85rem;
+  border-radius: 9999px !important;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+.bwn-search-expand:hover,
+.bwn-search-expand:focus-within,
+.bwn-search-expand.has-value {
+  width: 220px;
+}
+.bwn-search-input {
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--c-text);
+  font-size: 0.875rem;
+  font-family: inherit;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+}
+.bwn-search-input::placeholder {
+  color: var(--c-text-3);
+}
+
+/* Logged-deed rows on Profile: edit/delete controls stay hidden until
+   "Edit" is toggled on. (An earlier version wiggled the whole row like
+   iOS's icon-jiggle mode — dropped because it rotated the absolutely-
+   positioned delete badge right along with it, shifting its actual
+   clickable position every frame and causing real clicks to miss.) */
+.bwn-deed-delete,
+.bwn-deed-edit {
+  display: none;
+}
+.bwn-edit-mode .bwn-deed-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  border: 2px solid var(--c-bg);
+  cursor: pointer;
+  z-index: 1;
+}
+.bwn-edit-mode .bwn-deed-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--c-surface-hover);
+  color: var(--c-text-3);
+  border: none;
+  cursor: pointer;
+}
+.bwn-edit-mode .bwn-deed-edit:hover {
+  color: var(--c-accent-green);
 }
 
 /* Original BetterWorldNow brand mark: two stepped, right-rounded
@@ -47,7 +278,7 @@ a {
   content: '';
   position: absolute;
   background-color: #10B981;
-  border-radius: 0 40% 40% 0;
+  border-radius: 0 999px 999px 0;
 }
 .bwn-logo::before {
   left: 0;
@@ -74,18 +305,20 @@ a {
 }
 
 .bwn-input {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--c-input-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  border: 1px solid var(--c-glass-border);
   border-radius: 0.75rem;
   padding: 0.85rem 1.1rem;
-  color: #fff;
+  color: var(--c-text);
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   width: 100%;
+  box-shadow: inset 0 1px 0 var(--c-glass-inset-hi);
 }
 
 .bwn-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--c-text-3);
 }
 
 .bwn-input:focus {
@@ -94,10 +327,9 @@ a {
 }
 
 select.bwn-input {
-  color-scheme: dark;
   appearance: none;
   -webkit-appearance: none;
-  background-color: #16211d;
+  background-color: var(--c-select-bg);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.9rem center;
@@ -106,6 +338,303 @@ select.bwn-input {
 }
 
 select.bwn-input option {
-  background-color: #16211d;
-  color: #fff;
+  background-color: var(--c-select-bg);
+  color: var(--c-text);
+}
+
+@keyframes bwnFadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: bwnFadeInUp 0.6s ease-out backwards;
+}
+
+.fade-in-group > * {
+  animation: bwnFadeInUp 0.55s ease-out backwards;
+}
+.fade-in-group > *:nth-child(1) { animation-delay: 0s; }
+.fade-in-group > *:nth-child(2) { animation-delay: 0.08s; }
+.fade-in-group > *:nth-child(3) { animation-delay: 0.16s; }
+.fade-in-group > *:nth-child(4) { animation-delay: 0.24s; }
+.fade-in-group > *:nth-child(5) { animation-delay: 0.32s; }
+.fade-in-group > *:nth-child(6) { animation-delay: 0.4s; }
+.fade-in-group > *:nth-child(7) { animation-delay: 0.48s; }
+.fade-in-group > *:nth-child(8) { animation-delay: 0.56s; }
+
+/* Theme-aware overrides for the fixed-value Tailwind utilities used
+   across the site. Tailwind's CDN build generates plain hex/rgba
+   colors, so switching themes has to repaint those same utility
+   classes via CSS variables. !important is needed because the
+   Tailwind CDN script injects its own <style> at runtime and its
+   insertion point relative to this stylesheet isn't guaranteed. */
+.bg-background { background-color: var(--c-bg) !important; }
+.bg-background\/80 { background-color: var(--c-nav-bg) !important; }
+.bg-surface { background-color: var(--c-surface) !important; }
+.hover\:bg-surface:hover { background-color: var(--c-surface) !important; }
+.hover\:bg-surfaceHover:hover { background-color: var(--c-surface-hover) !important; }
+.text-white { color: var(--c-text) !important; }
+.hover\:text-white:hover { color: var(--c-text) !important; }
+.text-gray-300 { color: var(--c-text-2) !important; }
+.text-gray-400 { color: var(--c-text-3) !important; }
+.text-gray-500 { color: var(--c-text-4) !important; }
+.border-white\/5 { border-color: var(--c-border-1) !important; }
+.border-white\/10 { border-color: var(--c-border-2) !important; }
+.bg-white\/10 { background-color: var(--c-overlay-10) !important; }
+.text-brandGreen { color: var(--c-accent-green) !important; }
+.hover\:text-brandGreen:hover { color: var(--c-accent-green) !important; }
+.text-brandGold { color: var(--c-accent-gold) !important; }
+
+/* Reusable popup menu, shared by the nav profile dropdown and the
+   leaderboard region dropdown. Fixed/absolute-positioned via JS so a
+   transformed ancestor can never hijack its containing block. Same
+   liquid-glass treatment as .glass-card, but opaque enough (higher
+   blur+bg alpha) to keep menu text legible over whatever's beneath. */
+.bwn-popup-menu {
+  position: relative;
+  isolation: isolate;
+  background: var(--c-glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat)) var(--lg-filter, none);
+  border: 1px solid var(--c-glass-border);
+  border-radius: 1.1rem;
+  overflow: hidden;
+  box-shadow:
+    0 20px 45px var(--c-glass-shadow),
+    inset 0 1px 0 var(--c-glass-inset-hi),
+    inset 0 -1px 0 var(--c-glass-inset-lo);
+  z-index: 9999;
+}
+.bwn-popup-menu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, var(--c-glass-shine) 0%, transparent 55%);
+}
+
+.bwn-nav-popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 200px;
+}
+
+.bwn-popup-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--c-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.bwn-popup-item:hover {
+  background-color: var(--c-surface-hover);
+}
+
+.bwn-popup-item.active {
+  color: var(--c-accent-green);
+}
+
+.bwn-popup-item-danger {
+  color: #ef4444;
+}
+.bwn-popup-item-danger:hover {
+  background-color: rgba(239, 68, 68, 0.12);
+}
+
+/* Settings page: on/off toggle switch */
+.bwn-toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 26px;
+  flex-shrink: 0;
+}
+.bwn-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.bwn-toggle-track {
+  position: absolute;
+  inset: 0;
+  background-color: var(--c-surface-hover);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  border: 1px solid var(--c-glass-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: inset 0 1px 0 var(--c-glass-inset-hi);
+}
+.bwn-toggle-track::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+.bwn-toggle input:checked + .bwn-toggle-track {
+  background-color: #10B981;
+  border-color: #10B981;
+}
+.bwn-toggle input:checked + .bwn-toggle-track::before {
+  transform: translateX(18px);
+}
+
+/* Footer: liquid-glass sun/moon theme switch. Sky pill + knob morph together —
+   knob slides and cross-fades between moon (craters) and sun (rays) as it goes. */
+.bwn-theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.bwn-theme-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.bwn-theme-switch-track {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: 999px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid var(--c-glass-border);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  box-shadow:
+    0 6px 16px var(--c-glass-shadow),
+    inset 0 1px 0 var(--c-glass-inset-hi),
+    inset 0 -1px 0 var(--c-glass-inset-lo);
+  background: linear-gradient(135deg, #10241c 0%, #1c3328 100%);
+  transition: background 0.5s ease;
+}
+.bwn-theme-switch input:checked ~ .bwn-theme-switch-track {
+  background: linear-gradient(135deg, #cfeaff 0%, #eef8ff 100%);
+}
+.bwn-theme-switch-stars {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+.bwn-theme-switch-stars span {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.85;
+}
+.bwn-theme-switch input:checked ~ .bwn-theme-switch-track .bwn-theme-switch-stars {
+  opacity: 0;
+}
+.bwn-theme-switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fdfdfd, #cfd6e0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), inset -2px -2px 3px rgba(0, 0, 0, 0.15);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.45s ease;
+}
+.bwn-theme-switch input:checked ~ .bwn-theme-switch-track .bwn-theme-switch-knob {
+  transform: translateX(30px);
+  background: radial-gradient(circle at 35% 30%, #fff6cf, #ffd23f);
+  box-shadow: 0 2px 10px rgba(255, 191, 64, 0.55), 0 0 14px rgba(255, 210, 80, 0.4);
+}
+.bwn-theme-switch-craters,
+.bwn-theme-switch-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bwn-theme-switch-craters {
+  width: 26px;
+  height: 26px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.bwn-theme-switch input:checked ~ .bwn-theme-switch-track .bwn-theme-switch-craters {
+  opacity: 0;
+}
+.bwn-theme-switch-rays {
+  width: 38px;
+  height: 38px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 0.3s ease 0.12s, transform 0.3s ease 0.12s;
+}
+.bwn-theme-switch input:checked ~ .bwn-theme-switch-track .bwn-theme-switch-rays {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.bwn-settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--c-border-1);
+}
+.bwn-settings-row:last-child {
+  border-bottom: none;
+}
+
+/* Cursor firefly: a soft green glow that trails the pointer on the
+   home pages only, meant to show only through empty background and
+   sit behind real foreground content (text, cards, buttons).
+
+   A negative z-index here does NOT work for that in practice: a
+   position:fixed sibling with z-index:-1 renders invisible in testing
+   (confirmed empirically — this is not the documented stacking-context
+   spec behavior, but it's what this browser actually does). So instead
+   main/footer are explicitly promoted (position:relative; z-index:1)
+   to outrank the glow (z-index:0) in the same comparison bucket —
+   main/footer's own opaque content (cards, text, images) then paints
+   over the glow per-pixel, while their transparent gaps still let it
+   show through, without relying on negative-z painting order at all. */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 640px;
+  margin: -320px 0 0 -320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.55) 0%, rgba(16, 185, 129, 0.24) 38%, transparent 72%);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  will-change: transform;
+}
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+.cursor-glow.active {
+  opacity: 1;
 }
